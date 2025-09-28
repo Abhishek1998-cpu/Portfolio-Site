@@ -4,10 +4,10 @@ import { Code, Web, Storage, Cloud } from '@mui/icons-material';
 
 const About: React.FC = () => {
   const skills = [
-    { icon: Code, title: 'Frontend Development', description: 'React, TypeScript, Next.js, Vue.js' },
-    { icon: Storage, title: 'Backend Development', description: 'Node.js, Python, Express, FastAPI' },
-    { icon: Web, title: 'Full Stack', description: 'MERN Stack, MEAN Stack, RESTful APIs' },
-    { icon: Cloud, title: 'DevOps & Cloud', description: 'AWS, Docker, CI/CD, Microservices' },
+    { icon: Code, title: 'Frontend Development', description: 'React, React Native, TypeScript, Vue.js, JavaScript' },
+    { icon: Storage, title: 'Backend Development', description: 'Node.js, Express.js, Python, MongoDB, PostgreSQL' },
+    { icon: Web, title: 'E-commerce Solutions', description: 'Payment Integration, Browser Extensions, Mobile Apps' },
+    { icon: Cloud, title: 'Tools & Platforms', description: 'Firebase, AWS, Chrome APIs, Git, Web Scraping' },
   ];
 
   return (
@@ -25,8 +25,8 @@ const About: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-primary-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Passionate about creating innovative solutions that bridge the gap between 
-            design and functionality
+            Passionate about creating innovative e-commerce solutions and digital experiences 
+            that solve real-world problems
           </p>
         </motion.div>
 
@@ -43,20 +43,22 @@ const About: React.FC = () => {
             </h3>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                With over 3+ years of experience in software development, I specialize in 
-                building scalable web applications and digital solutions. My journey began 
-                with a passion for problem-solving and has evolved into expertise across 
-                the entire technology stack.
+                As a Computer Science Engineering graduate with expertise in full-stack development, 
+                I specialize in building scalable web applications and digital solutions. My journey 
+                in software development has been driven by a passion for creating innovative 
+                solutions that solve real-world problems.
               </p>
               <p>
-                I believe in writing clean, maintainable code and following best practices 
-                to deliver high-quality software solutions. My experience spans from 
-                frontend user interfaces to backend APIs and database design.
+                I have hands-on experience with modern web technologies and frameworks, focusing on 
+                creating seamless user experiences through robust frontend development and efficient 
+                backend systems. My work spans from e-commerce platforms to mobile applications 
+                and web extensions.
               </p>
               <p>
-                When I'm not coding, you can find me exploring new technologies, 
-                contributing to open-source projects, or sharing knowledge with the 
-                developer community.
+                I'm passionate about continuous learning and staying updated with the latest 
+                technologies. When I'm not coding, you can find me exploring new frameworks, 
+                contributing to open-source projects, or working on personal projects that 
+                challenge my technical skills.
               </p>
             </div>
 

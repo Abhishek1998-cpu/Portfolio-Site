@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { icon: GitHub, href: '#', label: 'GitHub' },
-    { icon: LinkedIn, href: '#', label: 'LinkedIn' },
-    { icon: Email, href: '#', label: 'Email' },
+    { icon: GitHub, href: 'https://github.com/Abhishek1998-cpu', label: 'GitHub' },
+    { icon: LinkedIn, href: 'https://www.linkedin.com/in/abhishek-verma-b790921a0/', label: 'LinkedIn' },
+    { icon: Email, href: 'mailto:abhishekverma998@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -33,8 +33,8 @@ const Footer: React.FC = () => {
                 <span className="text-xl font-bold">Abhishek Verma</span>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                Full Stack Software Engineer passionate about creating innovative 
-                digital solutions and exceptional user experiences.
+                Full Stack Software Engineer specializing in e-commerce solutions, 
+                mobile applications, and browser extensions that drive business growth.
               </p>
             </motion.div>
 
@@ -69,9 +69,8 @@ const Footer: React.FC = () => {
             >
               <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
               <div className="space-y-2 text-gray-300">
-                <p>abhishek.verma@email.com</p>
-                <p>+1 (555) 123-4567</p>
-                <p>San Francisco, CA</p>
+                <p>abhishekverma998@gmail.com</p>
+                <p>Uttar Pradesh, India</p>
               </div>
               <div className="flex space-x-4 mt-4">
                 {socialLinks.map((social, index) => (

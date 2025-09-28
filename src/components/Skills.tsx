@@ -7,33 +7,33 @@ const Skills: React.FC = () => {
       title: 'Frontend Technologies',
       skills: [
         { name: 'React', level: 95 },
+        { name: 'React Native', level: 90 },
         { name: 'TypeScript', level: 90 },
-        { name: 'Next.js', level: 85 },
-        { name: 'Vue.js', level: 80 },
-        { name: 'Tailwind CSS', level: 95 },
-        { name: 'Material-UI', level: 90 },
+        { name: 'Vue.js', level: 85 },
+        { name: 'JavaScript', level: 95 },
+        { name: 'Tailwind CSS', level: 90 },
       ]
     },
     {
       title: 'Backend Technologies',
       skills: [
         { name: 'Node.js', level: 90 },
-        { name: 'Python', level: 85 },
         { name: 'Express.js', level: 90 },
-        { name: 'FastAPI', level: 80 },
-        { name: 'PostgreSQL', level: 85 },
-        { name: 'MongoDB', level: 80 },
+        { name: 'Python', level: 85 },
+        { name: 'MongoDB', level: 85 },
+        { name: 'PostgreSQL', level: 80 },
+        { name: 'REST APIs', level: 95 },
       ]
     },
     {
       title: 'Tools & Technologies',
       skills: [
         { name: 'Git', level: 95 },
-        { name: 'Docker', level: 80 },
-        { name: 'AWS', level: 75 },
-        { name: 'CI/CD', level: 80 },
-        { name: 'Figma', level: 85 },
-        { name: 'Jest', level: 85 },
+        { name: 'Firebase', level: 85 },
+        { name: 'AWS', level: 80 },
+        { name: 'Chrome Extensions', level: 90 },
+        { name: 'Web Scraping', level: 85 },
+        { name: 'Machine Learning', level: 75 },
       ]
     }
   ];
@@ -113,9 +113,9 @@ const Skills: React.FC = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              'RESTful APIs', 'GraphQL', 'Microservices', 'Agile/Scrum',
-              'Test-Driven Development', 'Code Review', 'Performance Optimization',
-              'Security Best Practices', 'Responsive Design', 'Cross-browser Compatibility'
+              'E-commerce Development', 'Browser Extensions', 'Mobile App Development', 'API Integration',
+              'Data Analytics', 'User Experience Design', 'Performance Optimization',
+              'Payment Gateway Integration', 'Real-time Applications', 'Cross-platform Development'
             ].map((skill, index) => (
               <motion.span
                 key={skill}

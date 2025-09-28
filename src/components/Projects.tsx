@@ -5,56 +5,56 @@ import { GitHub, Launch, Code } from '@mui/icons-material';
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, inventory management, and admin dashboard.',
+      title: 'Product Recommendation Extension',
+      description: 'A sophisticated product recommendation system built for Fynd platform, featuring AI-powered suggestions, user behavior analysis, and seamless integration with e-commerce workflows.',
       image: '/api/placeholder/600/400',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Tailwind CSS'],
-      github: '#',
-      live: '#',
+      technologies: ['React', 'Node.js', 'Machine Learning', 'MongoDB', 'REST APIs'],
+      github: 'https://github.com/Abhishek1998-cpu',
+      live: 'https://extensions.fynd.com/extensions/product-recommendation',
       featured: true
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+      title: 'Fynd Coupons Platform',
+      description: 'A comprehensive coupon management and distribution platform with real-time validation, user analytics, and merchant dashboard integration.',
       image: '/api/placeholder/600/400',
-      technologies: ['Vue.js', 'Express', 'Socket.io', 'MongoDB', 'Material-UI'],
-      github: '#',
-      live: '#',
+      technologies: ['Vue.js', 'Express', 'PostgreSQL', 'Redis', 'Payment Gateway'],
+      github: 'https://github.com/Abhishek1998-cpu',
+      live: 'https://www.fyndcoupons.com/',
       featured: true
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A responsive weather dashboard that displays current weather conditions, forecasts, and interactive maps using weather APIs.',
+      title: 'Frolic Extension',
+      description: 'A browser extension for enhanced shopping experience with price comparison, deal alerts, and seamless checkout integration.',
       image: '/api/placeholder/600/400',
-      technologies: ['React', 'TypeScript', 'Chart.js', 'OpenWeather API'],
-      github: '#',
-      live: '#',
+      technologies: ['JavaScript', 'Chrome APIs', 'Web Scraping', 'React', 'Firebase'],
+      github: 'https://github.com/Abhishek1998-cpu',
+      live: 'https://extensions.fynd.com/extensions/frolic',
+      featured: true
+    },
+    {
+      title: 'Fynd Mobile App',
+      description: 'A cross-platform mobile application for the Fynd platform with offline capabilities, push notifications, and smooth user experience.',
+      image: '/api/placeholder/600/400',
+      technologies: ['React Native', 'Redux', 'Firebase', 'AWS', 'Push Notifications'],
+      github: 'https://github.com/Abhishek1998-cpu',
+      live: 'https://play.google.com/store/apps/details?id=co.go.fynd&hl=en&gl=US',
       featured: false
-    },
-    {
-      title: 'Social Media Analytics',
-      description: 'A comprehensive analytics platform for social media metrics with data visualization, reporting, and insights generation.',
-      image: '/api/placeholder/600/400',
-      technologies: ['Next.js', 'Python', 'FastAPI', 'D3.js', 'AWS'],
-      github: '#',
-      live: '#',
-      featured: true
     },
     {
       title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website showcasing projects, skills, and professional experience with smooth animations.',
+      description: 'A modern, responsive portfolio website showcasing projects, skills, and professional experience with smooth animations and interactive elements.',
       image: '/api/placeholder/600/400',
-      technologies: ['React', 'Framer Motion', 'Tailwind CSS', 'Vite'],
-      github: '#',
+      technologies: ['React', 'TypeScript', 'Framer Motion', 'Tailwind CSS', 'Vite'],
+      github: 'https://github.com/Abhishek1998-cpu',
       live: '#',
       featured: false
     },
     {
-      title: 'API Gateway Service',
-      description: 'A microservices API gateway with authentication, rate limiting, load balancing, and monitoring capabilities.',
+      title: 'E-commerce Analytics Dashboard',
+      description: 'A comprehensive analytics platform for tracking sales, user behavior, and business metrics with real-time data visualization.',
       image: '/api/placeholder/600/400',
-      technologies: ['Node.js', 'Express', 'Redis', 'Docker', 'Kubernetes'],
-      github: '#',
+      technologies: ['Next.js', 'D3.js', 'Python', 'FastAPI', 'PostgreSQL'],
+      github: 'https://github.com/Abhishek1998-cpu',
       live: '#',
       featured: false
     }
@@ -210,9 +210,14 @@ const Projects: React.FC = () => {
           <p className="text-gray-600 mb-6">
             Interested in seeing more of my work?
           </p>
-          <button className="btn-primary">
-            View All Projects
-          </button>
+          <a 
+            href="https://github.com/Abhishek1998-cpu" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-primary inline-block"
+          >
+            Let's Connect
+          </a>
         </motion.div>
       </div>
     </section>

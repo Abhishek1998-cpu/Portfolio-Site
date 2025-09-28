@@ -27,27 +27,21 @@ const Contact: React.FC = () => {
     {
       icon: Email,
       title: 'Email',
-      value: 'abhishek.verma@email.com',
-      href: 'mailto:abhishek.verma@email.com'
-    },
-    {
-      icon: Phone,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: 'abhishekverma998@gmail.com',
+      href: 'mailto:abhishekverma998@gmail.com'
     },
     {
       icon: LocationOn,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Uttar Pradesh, India',
       href: '#'
     }
   ];
 
   const socialLinks = [
-    { icon: LinkedIn, href: '#', label: 'LinkedIn' },
-    { icon: GitHub, href: '#', label: 'GitHub' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: LinkedIn, href: 'https://www.linkedin.com/in/abhishek-verma-b790921a0/', label: 'LinkedIn' },
+    { icon: GitHub, href: 'https://github.com/Abhishek1998-cpu', label: 'GitHub' },
+    { icon: Twitter, href: 'https://x.com/abhishek998v', label: 'Twitter' },
   ];
 
   return (
@@ -81,8 +75,9 @@ const Contact: React.FC = () => {
               Let's Connect
             </h3>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              I'm always interested in hearing about new opportunities and exciting projects. 
-              Whether you have a question or just want to say hi, I'll try my best to get back to you!
+              I'm always interested in hearing about new opportunities in e-commerce development, 
+              mobile applications, and innovative web solutions. Whether you have a project in mind 
+              or just want to connect, I'd love to hear from you!
             </p>
 
             <div className="space-y-6 mb-8">

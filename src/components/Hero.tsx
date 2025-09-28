@@ -1,13 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GitHub, LinkedIn, Email, Download } from '@mui/icons-material';
+import { GitHub, LinkedIn, Email, Download, Twitter } from '@mui/icons-material';
 
 const Hero: React.FC = () => {
   const socialLinks = [
-    { icon: GitHub, href: '#', label: 'GitHub' },
-    { icon: LinkedIn, href: '#', label: 'LinkedIn' },
-    { icon: Email, href: '#', label: 'Email' },
+    { icon: GitHub, href: 'https://github.com/Abhishek1998-cpu', label: 'GitHub' },
+    { icon: LinkedIn, href: 'https://www.linkedin.com/in/abhishek-verma-b790921a0/', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://x.com/abhishek998v', label: 'Twitter' },
+    { icon: Email, href: 'mailto:abhishekverma998@gmail.com', label: 'Email' },
   ];
+
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/Abhishek_Verma_CSE_31_June_2025 (1).pdf';
+    link.download = 'Abhishek_Verma_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
@@ -32,8 +42,12 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-8"
           >
-            <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center shadow-2xl">
-              <span className="text-white text-4xl font-bold">AV</span>
+            <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-primary-600">
+              <img 
+                src="https://media.licdn.com/dms/image/v2/C4D03AQGR7hBMUql5AQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1660478240430?e=1761782400&v=beta&t=z4WU2zxfybXRgDZLXo76f-pDvxW_u05idqjD2ClfN2o" 
+                alt="Abhishek Verma" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 
@@ -65,8 +79,8 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            I craft exceptional digital experiences through innovative web applications, 
-            combining cutting-edge frontend technologies with robust backend solutions.
+            I specialize in building innovative e-commerce solutions, browser extensions, and mobile applications 
+            that enhance user experiences and drive business growth.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -76,9 +90,9 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
-            <button className="btn-primary flex items-center space-x-2">
+            <button onClick={handleDownloadResume} className="btn-primary flex items-center space-x-2">
               <Download />
-              <span>Download CV</span>
+              <span>Download Resume</span>
             </button>
             <button className="btn-secondary">
               View My Work
