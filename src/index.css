@@ -8,9 +8,46 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     font-family: 'Inter', system-ui, sans-serif;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  /* Light theme (default) */
+  :root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+    --border-color: #e2e8f0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* Dark theme */
+  [data-theme='dark'] {
+    --bg-primary: #0d0d0d;
+    --bg-secondary: #121212;
+    --bg-tertiary: #1a1a1a;
+    --text-primary: #f5f5f5;
+    --text-secondary: #b3b3b3;
+    --text-muted: #808080;
+    --border-color: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .light-theme {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  .dark-theme {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
   }
 }
 
@@ -18,24 +55,57 @@
   .btn-primary {
     @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
   }
-  
+
   .btn-secondary {
     @apply bg-white hover:bg-gray-50 text-primary-600 font-medium py-3 px-6 rounded-lg border-2 border-primary-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
   }
-  
+
+  .btn-secondary-dark {
+    @apply bg-transparent hover:bg-gray-800 text-primary-400 font-medium py-3 px-6 rounded-lg border-2 border-primary-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+
   .section-padding {
     @apply py-16 px-4 sm:px-6 lg:px-8;
   }
-  
+
   .container-max {
     @apply max-w-7xl mx-auto;
   }
-  
+
   .gradient-text {
     @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
   }
-  
+
+  .gradient-text-dark {
+    @apply bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent;
+  }
+
   .card-hover {
     @apply transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
+  }
+
+  /* Dark mode specific classes */
+  .dark-card {
+    @apply bg-gray-800 border border-gray-700;
+  }
+
+  .dark-input {
+    @apply bg-gray-800 border border-gray-600 text-white placeholder-gray-400;
+  }
+
+  .dark-input:focus {
+    @apply border-primary-400 ring-primary-400;
+  }
+
+  .light-input {
+    @apply bg-white border border-gray-300 text-gray-900 placeholder-gray-500;
+  }
+
+  .light-input:focus {
+    @apply border-primary-500 ring-primary-500;
+  }
+
+  .input-error {
+    @apply border-red-500 ring-red-500;
   }
 }

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, Close } from '@mui/icons-material';
+import { Menu, Close, LightMode, DarkMode } from '@mui/icons-material';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,68 +45,129 @@ const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-lg backdrop-blur-md bg-opacity-95'
+          ? theme === 'dark'
+            ? 'bg-gray-900 shadow-lg backdrop-blur-md bg-opacity-95'
+            : 'bg-white shadow-lg backdrop-blur-md bg-opacity-95'
           : 'bg-transparent'
       }`}
     >
-      <nav className="container-max">
-        <div className="flex items-center justify-between py-4">
+      <nav className='container-max'>
+        <div
+          className='flex items-center justify-between py-4'
+          style={{ paddingLeft: '0.5rem', paddingRight: '0.5rem' }}
+        >
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-lg overflow-hidden">
-              <img 
-                src="https://media.licdn.com/dms/image/v2/C4D03AQGR7hBMUql5AQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1660478240430?e=1761782400&v=beta&t=z4WU2zxfybXRgDZLXo76f-pDvxW_u05idqjD2ClfN2o" 
-                alt="Abhishek Verma" 
-                className="w-full h-full object-cover"
+          <div className='flex items-center space-x-2'>
+            <div className='w-10 h-10 rounded-lg overflow-hidden'>
+              <img
+                src='https://media.licdn.com/dms/image/v2/C4D03AQGR7hBMUql5AQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1660478240430?e=1761782400&v=beta&t=z4WU2zxfybXRgDZLXo76f-pDvxW_u05idqjD2ClfN2o'
+                alt='Abhishek Verma'
+                className='w-full h-full object-cover'
               />
             </div>
-            <span className="text-xl font-bold text-gray-800">Abhishek Verma</span>
+            <span
+              className={`text-xl font-bold ${
+                theme === 'dark' ? 'text-white' : 'text-gray-800'
+              }`}
+            >
+              Abhishek Verma
+            </span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+          <div className='hidden md:flex items-center space-x-8'>
+            {navItems.map(item => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300 relative group"
+                className={`${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-primary-400'
+                    : 'text-gray-700 hover:text-primary-600'
+                } font-medium transition-colors duration-300 relative group`}
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 group-hover:w-full"></span>
+                <span
+                  className={`absolute -bottom-1 left-0 w-0 h-0.5 ${
+                    theme === 'dark' ? 'bg-primary-400' : 'bg-primary-600'
+                  } transition-all duration-300 group-hover:w-full`}
+                ></span>
               </button>
             ))}
-            <button onClick={handleDownloadResume} className="btn-primary">
+            <button onClick={handleDownloadResume} className='btn-primary'>
               Download Resume
+            </button>
+            <button
+              onClick={toggleTheme}
+              className={`p-2 rounded-lg transition-all duration-300 ${
+                theme === 'dark'
+                  ? 'bg-gray-800 text-yellow-400 hover:bg-gray-700'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+              aria-label='Toggle theme'
+            >
+              {theme === 'dark' ? <LightMode /> : <DarkMode />}
             </button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <Close className="w-6 h-6 text-gray-700" />
-            ) : (
-              <Menu className="w-6 h-6 text-gray-700" />
-            )}
-          </button>
+          <div className='md:hidden flex items-center space-x-2'>
+            <button
+              onClick={toggleTheme}
+              className={`p-2 rounded-lg transition-all duration-300 ${
+                theme === 'dark'
+                  ? 'bg-gray-800 text-yellow-400 hover:bg-gray-700'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+              aria-label='Toggle theme'
+            >
+              {theme === 'dark' ? <LightMode /> : <DarkMode />}
+            </button>
+            <button className='p-2' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? (
+                <Close
+                  className={`w-6 h-6 ${
+                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                  }`}
+                />
+              ) : (
+                <Menu
+                  className={`w-6 h-6 ${
+                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                  }`}
+                />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200 py-4">
-            <div className="flex flex-col space-y-4">
-              {navItems.map((item) => (
+          <div
+            className={`md:hidden ${
+              theme === 'dark'
+                ? 'bg-gray-900 border-gray-700'
+                : 'bg-white border-gray-200'
+            } border-t py-4`}
+          >
+            <div className='flex flex-col space-y-4'>
+              {navItems.map(item => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-700 hover:text-primary-600 font-medium py-2 text-left transition-colors duration-300"
+                  className={`${
+                    theme === 'dark'
+                      ? 'text-gray-300 hover:text-primary-400'
+                      : 'text-gray-700 hover:text-primary-600'
+                  } font-medium py-2 text-left transition-colors duration-300`}
                 >
                   {item.name}
                 </button>
               ))}
-              <button onClick={handleDownloadResume} className="btn-primary w-full mt-4">
+              <button
+                onClick={handleDownloadResume}
+                className='btn-primary w-full mt-4'
+              >
                 Download Resume
               </button>
             </div>
