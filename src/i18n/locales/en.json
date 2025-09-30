@@ -1,0 +1,125 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "downloadResume": "Download Resume"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Abhishek",
+    "title": "Full Stack Software Engineer",
+    "description": "I specialize in building innovative e-commerce solutions, browser extensions, and mobile applications that enhance user experiences and drive business growth.",
+    "downloadResume": "Download Resume",
+    "viewWork": "View My Work"
+  },
+  "about": {
+    "title": "About",
+    "highlight": "Me",
+    "subtitle": "Get to know me better",
+    "role": "Full Stack Software Engineer",
+    "description1": "I'm a passionate developer with expertise in modern web technologies and mobile app development. I love creating solutions that make a real difference in people's lives.",
+    "description2": "With a strong foundation in both frontend and backend technologies, I enjoy working on diverse projects that challenge me to grow and learn new skills.",
+    "stats": {
+      "projects": "Projects Completed",
+      "experience": "Years Experience"
+    },
+    "skills": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "Creating beautiful and responsive user interfaces"
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "Building robust and scalable server-side applications"
+      },
+      "mobile": {
+        "title": "Mobile Development",
+        "description": "Developing cross-platform mobile applications"
+      }
+    }
+  },
+  "skills": {
+    "title": "My",
+    "highlight": "Skills",
+    "subtitle": "A comprehensive overview of my technical expertise and proficiency levels",
+    "categories": {
+      "frontend": "Frontend Technologies",
+      "backend": "Backend Technologies",
+      "tools": "Tools & Technologies"
+    },
+    "additionalSkills": "Additional Skills"
+  },
+  "projects": {
+    "title": "My",
+    "highlight": "Projects",
+    "subtitle": "Some of my recent work and personal projects",
+    "ecommerce": {
+      "title": "E-commerce Platform",
+      "description": "A full-stack e-commerce solution with modern UI, payment integration, and admin dashboard.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe"]
+    },
+    "extension": {
+      "title": "Browser Extension",
+      "description": "A productivity browser extension that helps users manage their daily tasks and improve workflow.",
+      "technologies": ["JavaScript", "Chrome APIs", "HTML", "CSS"]
+    },
+    "mobile": {
+      "title": "Mobile App",
+      "description": "A cross-platform mobile application for task management with real-time synchronization.",
+      "technologies": ["React Native", "Firebase", "Redux"]
+    },
+    "github": "GitHub",
+    "liveDemo": "Live Demo",
+    "moreWork": "Interested in seeing more of my work?",
+    "connect": "Let's Connect"
+  },
+  "contact": {
+    "title": "Get In",
+    "highlight": "Touch",
+    "subtitle": "Let's discuss your next project",
+    "connect": {
+      "title": "Let's Connect",
+      "description": "I'm always interested in new opportunities and exciting projects. Feel free to reach out!"
+    },
+    "info": {
+      "email": "Email",
+      "location": "Location"
+    },
+    "follow": "Follow Me",
+    "form": {
+      "title": "Send Message",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "success": {
+        "title": "Message Sent!",
+        "message": "Thank you for your message. I'll get back to you soon!"
+      },
+      "validation": {
+        "nameRequired": "Name is required",
+        "nameMinLength": "Name must be at least 2 characters",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "subjectRequired": "Subject is required",
+        "messageRequired": "Message is required",
+        "messageMinLength": "Message must be at least 10 characters"
+      }
+    }
+  },
+  "footer": {
+    "description": "A passionate full-stack developer creating innovative solutions for the digital world.",
+    "contact": "Contact Info",
+    "quickLinks": "Quick Links",
+    "getInTouch": "Get In Touch",
+    "social": "Follow Me",
+    "copyright": "© 2024 Abhishek Verma. All rights reserved.",
+    "language": "Language"
+  }
+}

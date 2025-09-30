@@ -2,55 +2,36 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { GitHub, Launch, Code } from '@mui/icons-material';
 import { useTheme } from '../contexts/ThemeContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Projects: React.FC = () => {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   const projects = [
     {
-      title: 'Product Recommendation Extension',
-      description:
-        'A sophisticated product recommendation system built for Fynd platform, featuring AI-powered suggestions, user behavior analysis, and seamless integration with e-commerce workflows.',
+      title: t('projects.ecommerce.title'),
+      description: t('projects.ecommerce.description'),
       image: '/api/placeholder/600/400',
-      technologies: [
-        'React',
-        'Node.js',
-        'Machine Learning',
-        'MongoDB',
-        'REST APIs',
-      ],
+      technologies: t('projects.ecommerce.technologies', { returnObjects: true }),
       github: 'https://github.com/Abhishek1998-cpu',
       live: 'https://extensions.fynd.com/extensions/product-recommendation',
       featured: true,
     },
     {
-      title: 'Fynd Coupons Platform',
-      description:
-        'A comprehensive coupon management and distribution platform with real-time validation, user analytics, and merchant dashboard integration.',
+      title: t('projects.extension.title'),
+      description: t('projects.extension.description'),
       image: '/api/placeholder/600/400',
-      technologies: [
-        'Vue.js',
-        'Express',
-        'PostgreSQL',
-        'Redis',
-        'Payment Gateway',
-      ],
+      technologies: t('projects.extension.technologies', { returnObjects: true }),
       github: 'https://github.com/Abhishek1998-cpu',
       live: 'https://www.fyndcoupons.com/',
       featured: true,
     },
     {
-      title: 'Frolic Extension',
-      description:
-        'A browser extension for enhanced shopping experience with price comparison, deal alerts, and seamless checkout integration.',
+      title: t('projects.mobile.title'),
+      description: t('projects.mobile.description'),
       image: '/api/placeholder/600/400',
-      technologies: [
-        'JavaScript',
-        'Chrome APIs',
-        'Web Scraping',
-        'React',
-        'Firebase',
-      ],
+      technologies: t('projects.mobile.technologies', { returnObjects: true }),
       github: 'https://github.com/Abhishek1998-cpu',
       live: 'https://extensions.fynd.com/extensions/frolic',
       featured: true,
@@ -122,13 +103,13 @@ const Projects: React.FC = () => {
               theme === 'dark' ? 'text-white' : 'text-gray-800'
             }`}
           >
-            Featured{' '}
+            {t('projects.title')}{' '}
             <span
               className={
                 theme === 'dark' ? 'gradient-text-dark' : 'gradient-text'
               }
             >
-              Projects
+              {t('projects.highlight')}
             </span>
           </h2>
           <div className='w-24 h-1 bg-primary-600 mx-auto mb-8'></div>
@@ -137,7 +118,7 @@ const Projects: React.FC = () => {
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}
           >
-            A showcase of my recent work and technical achievements
+            {t('projects.subtitle')}
           </p>
         </motion.div>
 
@@ -196,7 +177,7 @@ const Projects: React.FC = () => {
                     }`}
                   >
                     <GitHub className='w-5 h-5' />
-                    <span>Code</span>
+                    <span>{t('projects.github')}</span>
                   </a>
                   <a
                     href={project.live}
@@ -207,7 +188,7 @@ const Projects: React.FC = () => {
                     }`}
                   >
                     <Launch className='w-5 h-5' />
-                    <span>Live Demo</span>
+                    <span>{t('projects.liveDemo')}</span>
                   </a>
                 </div>
               </div>
@@ -325,7 +306,7 @@ const Projects: React.FC = () => {
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}
           >
-            Interested in seeing more of my work?
+            {t('projects.moreWork')}
           </p>
           <a
             href='https://github.com/Abhishek1998-cpu'
@@ -333,7 +314,7 @@ const Projects: React.FC = () => {
             rel='noopener noreferrer'
             className='btn-primary inline-block'
           >
-            Let's Connect
+            {t('projects.connect')}
           </a>
         </motion.div>
       </div>

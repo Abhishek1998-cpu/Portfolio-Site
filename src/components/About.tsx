@@ -2,19 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Web, Storage, Cloud } from '@mui/icons-material';
 import { useTheme } from '../contexts/ThemeContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const About: React.FC = () => {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   const skills = [
     {
       icon: Code,
-      title: 'Frontend Development',
+      title: t('about.skills.frontend.title'),
       description: 'React, React Native, TypeScript, Vue.js, JavaScript',
     },
     {
       icon: Storage,
-      title: 'Backend Development',
+      title: t('about.skills.backend.title'),
       description: 'Node.js, Express.js, Python, MongoDB, PostgreSQL',
     },
     {
@@ -49,13 +51,13 @@ const About: React.FC = () => {
               theme === 'dark' ? 'text-white' : 'text-gray-800'
             }`}
           >
-            About{' '}
+            {t('about.title')}{' '}
             <span
               className={
                 theme === 'dark' ? 'gradient-text-dark' : 'gradient-text'
               }
             >
-              Me
+              {t('about.highlight')}
             </span>
           </h2>
           <div className='w-24 h-1 bg-primary-600 mx-auto mb-8'></div>
@@ -64,8 +66,7 @@ const About: React.FC = () => {
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}
           >
-            Passionate about creating innovative e-commerce solutions and
-            digital experiences that solve real-world problems
+            {t('about.subtitle')}
           </p>
         </motion.div>
 
@@ -82,7 +83,7 @@ const About: React.FC = () => {
                 theme === 'dark' ? 'text-white' : 'text-gray-800'
               }`}
             >
-              Full Stack Software Engineer
+              {t('about.role')}
             </h3>
             <div
               className={`space-y-4 leading-relaxed ${
@@ -90,25 +91,10 @@ const About: React.FC = () => {
               }`}
             >
               <p>
-                As a Computer Science Engineering graduate with expertise in
-                full-stack development, I specialize in building scalable web
-                applications and digital solutions. My journey in software
-                development has been driven by a passion for creating innovative
-                solutions that solve real-world problems.
+                {t('about.description1')}
               </p>
               <p>
-                I have hands-on experience with modern web technologies and
-                frameworks, focusing on creating seamless user experiences
-                through robust frontend development and efficient backend
-                systems. My work spans from e-commerce platforms to mobile
-                applications and web extensions.
-              </p>
-              <p>
-                I'm passionate about continuous learning and staying updated
-                with the latest technologies. When I'm not coding, you can find
-                me exploring new frameworks, contributing to open-source
-                projects, or working on personal projects that challenge my
-                technical skills.
+                {t('about.description2')}
               </p>
             </div>
 
@@ -127,7 +113,7 @@ const About: React.FC = () => {
                     theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                   }
                 >
-                  Projects Completed
+                  {t('about.stats.projects')}
                 </div>
               </div>
               <div
@@ -143,7 +129,7 @@ const About: React.FC = () => {
                     theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                   }
                 >
-                  Years Experience
+                  {t('about.stats.experience')}
                 </div>
               </div>
             </div>

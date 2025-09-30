@@ -1,13 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Skills: React.FC = () => {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   const skillCategories = [
     {
-      title: 'Frontend Technologies',
+      title: t('skills.categories.frontend'),
       skills: [
         { name: 'React', level: 95 },
         { name: 'React Native', level: 90 },
@@ -18,7 +20,7 @@ const Skills: React.FC = () => {
       ],
     },
     {
-      title: 'Backend Technologies',
+      title: t('skills.categories.backend'),
       skills: [
         { name: 'Node.js', level: 90 },
         { name: 'Express.js', level: 90 },
@@ -29,7 +31,7 @@ const Skills: React.FC = () => {
       ],
     },
     {
-      title: 'Tools & Technologies',
+      title: t('skills.categories.tools'),
       skills: [
         { name: 'Git', level: 95 },
         { name: 'Firebase', level: 85 },
@@ -61,13 +63,13 @@ const Skills: React.FC = () => {
               theme === 'dark' ? 'text-white' : 'text-gray-800'
             }`}
           >
-            My{' '}
+            {t('skills.title')}{' '}
             <span
               className={
                 theme === 'dark' ? 'gradient-text-dark' : 'gradient-text'
               }
             >
-              Skills
+              {t('skills.highlight')}
             </span>
           </h2>
           <div className='w-24 h-1 bg-primary-600 mx-auto mb-8'></div>
@@ -76,8 +78,7 @@ const Skills: React.FC = () => {
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}
           >
-            A comprehensive overview of my technical expertise and proficiency
-            levels
+            {t('skills.subtitle')}
           </p>
         </motion.div>
 
@@ -155,7 +156,7 @@ const Skills: React.FC = () => {
               theme === 'dark' ? 'text-white' : 'text-gray-800'
             }`}
           >
-            Additional Skills
+            {t('skills.additionalSkills')}
           </h3>
           <div className='flex flex-wrap justify-center gap-4'>
             {[

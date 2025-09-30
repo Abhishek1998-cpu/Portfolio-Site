@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, Close, LightMode, DarkMode } from '@mui/icons-material';
+import {
+  Menu,
+  Close,
+  LightMode,
+  DarkMode,
+} from '@mui/icons-material';
 import { useTheme } from '../contexts/ThemeContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,11 +24,11 @@ const Header: React.FC = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('header.nav.home'), href: '#home' },
+    { name: t('header.nav.about'), href: '#about' },
+    { name: t('header.nav.skills'), href: '#skills' },
+    { name: t('header.nav.projects'), href: '#projects' },
+    { name: t('header.nav.contact'), href: '#contact' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -95,7 +102,7 @@ const Header: React.FC = () => {
               </button>
             ))}
             <button onClick={handleDownloadResume} className='btn-primary'>
-              Download Resume
+              {t('header.downloadResume')}
             </button>
             <button
               onClick={toggleTheme}
@@ -168,7 +175,7 @@ const Header: React.FC = () => {
                 onClick={handleDownloadResume}
                 className='btn-primary w-full mt-4'
               >
-                Download Resume
+                {t('header.downloadResume')}
               </button>
             </div>
           </div>

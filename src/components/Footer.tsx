@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { GitHub, LinkedIn, Email, ArrowUpward } from '@mui/icons-material';
+import {
+  GitHub,
+  LinkedIn,
+  Email,
+  ArrowUpward,
+  Language,
+} from '@mui/icons-material';
 import { useTheme } from '../contexts/ThemeContext';
+import { useLanguage, languageNames } from '../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
   const { theme } = useTheme();
+  const { language, setLanguage, t } = useLanguage();
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleLanguageChange = (lang: string) => {
+    setLanguage(lang as any);
+    setIsLanguageDropdownOpen(false);
   };
 
   const socialLinks = [
@@ -32,7 +46,7 @@ const Footer: React.FC = () => {
         {/* Main Footer Content */}
         <div className='py-12'>
           <div
-            className='grid md:grid-cols-3 gap-8'
+            className='grid md:grid-cols-4 gap-8'
             style={{ padding: '1rem' }}
           >
             {/* Brand Section */}
@@ -70,9 +84,9 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className='text-lg font-semibold mb-4'>Quick Links</h3>
+              <h3 className='text-lg font-semibold mb-4'>{t('footer.quickLinks')}</h3>
               <ul className='space-y-2'>
-                {['About', 'Skills', 'Projects', 'Contact'].map(link => (
+                {[t('header.nav.about'), t('header.nav.skills'), t('header.nav.projects'), t('header.nav.contact')].map(link => (
                   <li key={link}>
                     <a
                       href={`#${link.toLowerCase()}`}
@@ -92,7 +106,7 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className='text-lg font-semibold mb-4'>Get In Touch</h3>
+              <h3 className='text-lg font-semibold mb-4'>{t('footer.getInTouch')}</h3>
               <div
                 className={`space-y-2 ${
                   theme === 'dark' ? 'text-gray-400' : 'text-gray-300'
@@ -122,6 +136,80 @@ const Footer: React.FC = () => {
                 ))}
               </div>
             </motion.div>
+
+            {/* Language Selector */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className='relative'
+            >
+              <h3 className='text-lg font-semibold mb-4'>
+                {t('footer.language')}
+              </h3>
+              <div className='relative'>
+                <button
+                  onClick={() =>
+                    setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
+                  }
+                  className={`w-full flex items-center justify-between px-4 py-2 rounded-lg border transition-all duration-300 ${
+                    theme === 'dark'
+                      ? 'bg-gray-800 border-gray-700 text-white hover:bg-gray-700'
+                      : 'bg-white border-gray-300 text-gray-800 hover:bg-gray-50'
+                  }`}
+                >
+                  <div className='flex items-center space-x-2'>
+                    <Language className='w-4 h-4' />
+                    <span>{languageNames[language]}</span>
+                  </div>
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      isLanguageDropdownOpen ? 'rotate-180' : ''
+                    }`}
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth={2}
+                      d='M19 9l-7 7-7-7'
+                    />
+                  </svg>
+                </button>
+
+                {isLanguageDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className={`absolute top-full left-0 right-0 mt-1 rounded-lg shadow-lg z-50 ${
+                      theme === 'dark'
+                        ? 'bg-gray-800 border-gray-700'
+                        : 'bg-white border-gray-300'
+                    } border`}
+                  >
+                    {Object.entries(languageNames).map(([code, name]) => (
+                      <button
+                        key={code}
+                        onClick={() => handleLanguageChange(code)}
+                        className={`w-full px-4 py-2 text-left hover:bg-primary-600 hover:text-white transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg ${
+                          language === code
+                            ? 'bg-primary-600 text-white'
+                            : theme === 'dark'
+                              ? 'text-gray-300'
+                              : 'text-gray-800'
+                        }`}
+                      >
+                        {name}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </div>
+            </motion.div>
           </div>
         </div>
 
@@ -141,7 +229,7 @@ const Footer: React.FC = () => {
                 theme === 'dark' ? 'text-gray-500' : 'text-gray-400'
               }`}
             >
-              © 2024 Abhishek Verma. All rights reserved.
+              © 2024 Abhishek Verma. {t('footer.copyright')}
             </motion.p>
 
             <motion.button

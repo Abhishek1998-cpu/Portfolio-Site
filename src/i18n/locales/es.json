@@ -1,0 +1,125 @@
+{
+  "header": {
+    "nav": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "skills": "Habilidades",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "downloadResume": "Descargar CV"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Abhishek",
+    "title": "Ingeniero de Software Full Stack",
+    "description": "Me especializo en la creación de soluciones de comercio electrónico innovadoras, extensiones de navegador y aplicaciones móviles que mejoran las experiencias del usuario e impulsan el crecimiento empresarial.",
+    "downloadResume": "Descargar CV",
+    "viewWork": "Ver mi trabajo"
+  },
+  "about": {
+    "title": "Acerca",
+    "highlight": "de mí",
+    "subtitle": "Conóceme mejor",
+    "role": "Ingeniero de Software Full Stack",
+    "description1": "Soy un desarrollador apasionado con experiencia en tecnologías web modernas y desarrollo de aplicaciones móviles. Me encanta crear soluciones que marquen una diferencia real en la vida de las personas.",
+    "description2": "Con una base sólida en tecnologías frontend y backend, disfruto trabajando en proyectos diversos que me desafían a crecer y aprender nuevas habilidades.",
+    "stats": {
+      "projects": "Proyectos Completados",
+      "experience": "Años de Experiencia"
+    },
+    "skills": {
+      "frontend": {
+        "title": "Desarrollo Frontend",
+        "description": "Crear interfaces de usuario hermosas y responsivas"
+      },
+      "backend": {
+        "title": "Desarrollo Backend",
+        "description": "Construir aplicaciones del lado del servidor robustas y escalables"
+      },
+      "mobile": {
+        "title": "Desarrollo Móvil",
+        "description": "Desarrollar aplicaciones móviles multiplataforma"
+      }
+    }
+  },
+  "skills": {
+    "title": "Mis",
+    "highlight": "Habilidades",
+    "subtitle": "Una visión integral de mi experiencia técnica y niveles de competencia",
+    "categories": {
+      "frontend": "Tecnologías Frontend",
+      "backend": "Tecnologías Backend",
+      "tools": "Herramientas y Tecnologías"
+    },
+    "additionalSkills": "Habilidades Adicionales"
+  },
+  "projects": {
+    "title": "Mis",
+    "highlight": "Proyectos",
+    "subtitle": "Algunos de mis trabajos recientes y proyectos personales",
+    "ecommerce": {
+      "title": "Plataforma E-commerce",
+      "description": "Una solución e-commerce full-stack con interfaz moderna, integración de pagos y panel de administración.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe"]
+    },
+    "extension": {
+      "title": "Extensión de Navegador",
+      "description": "Una extensión de navegador de productividad que ayuda a los usuarios a gestionar sus tareas diarias y mejorar su flujo de trabajo.",
+      "technologies": ["JavaScript", "Chrome APIs", "HTML", "CSS"]
+    },
+    "mobile": {
+      "title": "Aplicación Móvil",
+      "description": "Una aplicación móvil multiplataforma para gestión de tareas con sincronización en tiempo real.",
+      "technologies": ["React Native", "Firebase", "Redux"]
+    },
+    "github": "GitHub",
+    "liveDemo": "Demo en Vivo",
+    "moreWork": "¿Interesado en ver más de mi trabajo?",
+    "connect": "Conectemos"
+  },
+  "contact": {
+    "title": "Ponerse en",
+    "highlight": "Contacto",
+    "subtitle": "Hablemos de tu próximo proyecto",
+    "connect": {
+      "title": "Conectemos",
+      "description": "Siempre estoy interesado en nuevas oportunidades y proyectos emocionantes. ¡No dudes en contactarme!"
+    },
+    "info": {
+      "email": "Email",
+      "location": "Ubicación"
+    },
+    "follow": "Sígueme",
+    "form": {
+      "title": "Enviar Mensaje",
+      "name": "Nombre",
+      "email": "Email",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje",
+      "success": {
+        "title": "¡Mensaje Enviado!",
+        "message": "¡Gracias por tu mensaje. Te responderé pronto!"
+      },
+      "validation": {
+        "nameRequired": "El nombre es requerido",
+        "nameMinLength": "El nombre debe tener al menos 2 caracteres",
+        "emailRequired": "El email es requerido",
+        "emailInvalid": "Por favor ingresa una dirección de email válida",
+        "subjectRequired": "El asunto es requerido",
+        "messageRequired": "El mensaje es requerido",
+        "messageMinLength": "El mensaje debe tener al menos 10 caracteres"
+      }
+    }
+  },
+  "footer": {
+    "description": "Un desarrollador full-stack apasionado creando soluciones innovadoras para el mundo digital.",
+    "contact": "Información de Contacto",
+    "quickLinks": "Enlaces Rápidos",
+    "getInTouch": "Ponerse en Contacto",
+    "social": "Sígueme",
+    "copyright": "© 2024 Abhishek Verma. Todos los derechos reservados.",
+    "language": "Idioma"
+  }
+}

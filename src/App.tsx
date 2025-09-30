@@ -1,6 +1,7 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider as CustomThemeProvider } from './contexts/ThemeContext';
+import { LanguageProvider } from './contexts/LanguageContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -25,22 +26,24 @@ const theme = createTheme({
 
 function App() {
   return (
-    <CustomThemeProvider>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <div className='App'>
-          <Header />
-          <main>
-            <Hero />
-            <About />
-            <Skills />
-            <Projects />
-            <Contact />
-          </main>
-          <Footer />
-        </div>
-      </ThemeProvider>
-    </CustomThemeProvider>
+    <LanguageProvider>
+      <CustomThemeProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <div className='App'>
+            <Header />
+            <main>
+              <Hero />
+              <About />
+              <Skills />
+              <Projects />
+              <Contact />
+            </main>
+            <Footer />
+          </div>
+        </ThemeProvider>
+      </CustomThemeProvider>
+    </LanguageProvider>
   );
 }
 

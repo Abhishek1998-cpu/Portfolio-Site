@@ -8,9 +8,11 @@ import {
   Twitter,
 } from '@mui/icons-material';
 import { useTheme } from '../contexts/ThemeContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
   const socialLinks = [
     {
@@ -84,13 +86,13 @@ const Hero: React.FC = () => {
               theme === 'dark' ? 'text-white' : 'text-gray-800'
             }`}
           >
-            Hi, I'm{' '}
+            {t('hero.greeting')}{' '}
             <span
               className={
                 theme === 'dark' ? 'gradient-text-dark' : 'gradient-text'
               }
             >
-              Abhishek
+              {t('hero.name')}
             </span>
           </motion.h1>
 
@@ -103,7 +105,7 @@ const Hero: React.FC = () => {
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}
           >
-            Full Stack Software Engineer
+            {t('hero.title')}
           </motion.p>
 
           {/* Description */}
@@ -115,9 +117,7 @@ const Hero: React.FC = () => {
               theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
             }`}
           >
-            I specialize in building innovative e-commerce solutions, browser
-            extensions, and mobile applications that enhance user experiences
-            and drive business growth.
+            {t('hero.description')}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -132,14 +132,14 @@ const Hero: React.FC = () => {
               className='btn-primary flex items-center space-x-2'
             >
               <Download />
-              <span>Download Resume</span>
+              <span>{t('hero.downloadResume')}</span>
             </button>
             <button
               className={
                 theme === 'dark' ? 'btn-secondary-dark' : 'btn-secondary'
               }
             >
-              View My Work
+              {t('hero.viewWork')}
             </button>
           </motion.div>
 

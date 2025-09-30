@@ -10,6 +10,7 @@ import {
   CheckCircle,
 } from '@mui/icons-material';
 import { useTheme } from '../contexts/ThemeContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import { useForm } from 'react-hook-form';
 
 interface FormData {
@@ -21,6 +22,7 @@ interface FormData {
 
 const Contact: React.FC = () => {
   const { theme } = useTheme();
+  const { t } = useLanguage();
   const [showSuccess, setShowSuccess] = useState(false);
 
   const {
@@ -45,13 +47,13 @@ const Contact: React.FC = () => {
   const contactInfo = [
     {
       icon: Email,
-      title: 'Email',
+      title: t('contact.info.email'),
       value: 'abhishekverma998@gmail.com',
       href: 'mailto:abhishekverma998@gmail.com',
     },
     {
       icon: LocationOn,
-      title: 'Location',
+      title: t('contact.info.location'),
       value: 'Uttar Pradesh, India',
       href: '#',
     },
@@ -91,13 +93,13 @@ const Contact: React.FC = () => {
               theme === 'dark' ? 'text-white' : 'text-gray-800'
             }`}
           >
-            Get In{' '}
+            {t('contact.title')}{' '}
             <span
               className={
                 theme === 'dark' ? 'gradient-text-dark' : 'gradient-text'
               }
             >
-              Touch
+              {t('contact.highlight')}
             </span>
           </h2>
           <div className='w-24 h-1 bg-primary-600 mx-auto mb-8'></div>
@@ -106,8 +108,7 @@ const Contact: React.FC = () => {
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}
           >
-            Ready to collaborate? Let's discuss your next project or just say
-            hello!
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
@@ -124,17 +125,14 @@ const Contact: React.FC = () => {
                 theme === 'dark' ? 'text-white' : 'text-gray-800'
               }`}
             >
-              Let's Connect
+              {t('contact.connect.title')}
             </h3>
             <p
               className={`mb-8 leading-relaxed ${
                 theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
               }`}
             >
-              I'm always interested in hearing about new opportunities in
-              e-commerce development, mobile applications, and innovative web
-              solutions. Whether you have a project in mind or just want to
-              connect, I'd love to hear from you!
+              {t('contact.connect.description')}
             </p>
 
             <div className='space-y-6 mb-8'>
@@ -180,7 +178,7 @@ const Contact: React.FC = () => {
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
                 }`}
               >
-                Follow Me
+                {t('contact.follow')}
               </h4>
               <div className='flex space-x-4'>
                 {socialLinks.map((social, index) => (
@@ -224,7 +222,7 @@ const Contact: React.FC = () => {
                 theme === 'dark' ? 'text-white' : 'text-gray-800'
               }`}
             >
-              Send Message
+              {t('contact.form.title')}
             </h3>
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
               <div className='grid md:grid-cols-2 gap-6'>
@@ -235,16 +233,16 @@ const Contact: React.FC = () => {
                       theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                     }`}
                   >
-                    Name
+                    {t('contact.form.name')}
                   </label>
                   <input
                     type='text'
                     id='name'
                     {...register('name', {
-                      required: 'Name is required',
+                      required: t('contact.form.validation.nameRequired'),
                       minLength: {
                         value: 2,
-                        message: 'Name must be at least 2 characters',
+                        message: t('contact.form.validation.nameMinLength'),
                       },
                     })}
                     className={`w-full px-4 py-3 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 ${
@@ -254,7 +252,7 @@ const Contact: React.FC = () => {
                           ? 'dark-input'
                           : 'light-input'
                     }`}
-                    placeholder='Your Name'
+                    placeholder={t('contact.form.name')}
                   />
                   {errors.name && (
                     <p className='text-red-500 text-sm mt-1'>
@@ -269,16 +267,16 @@ const Contact: React.FC = () => {
                       theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                     }`}
                   >
-                    Email
+                    {t('contact.form.email')}
                   </label>
                   <input
                     type='email'
                     id='email'
                     {...register('email', {
-                      required: 'Email is required',
+                      required: t('contact.form.validation.emailRequired'),
                       pattern: {
                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: 'Invalid email address',
+                        message: t('contact.form.validation.emailInvalid'),
                       },
                     })}
                     className={`w-full px-4 py-3 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 ${
@@ -288,7 +286,7 @@ const Contact: React.FC = () => {
                           ? 'dark-input'
                           : 'light-input'
                     }`}
-                    placeholder='your@email.com'
+                    placeholder={t('contact.form.email')}
                   />
                   {errors.email && (
                     <p className='text-red-500 text-sm mt-1'>
@@ -304,13 +302,13 @@ const Contact: React.FC = () => {
                     theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                   }`}
                 >
-                  Subject
+                  {t('contact.form.subject')}
                 </label>
                 <input
                   type='text'
                   id='subject'
                   {...register('subject', {
-                    required: 'Subject is required',
+                    required: t('contact.form.validation.subjectRequired'),
                     minLength: {
                       value: 5,
                       message: 'Subject must be at least 5 characters',
@@ -323,7 +321,7 @@ const Contact: React.FC = () => {
                         ? 'dark-input'
                         : 'light-input'
                   }`}
-                  placeholder='Subject'
+                  placeholder={t('contact.form.subject')}
                 />
                 {errors.subject && (
                   <p className='text-red-500 text-sm mt-1'>
@@ -338,16 +336,16 @@ const Contact: React.FC = () => {
                     theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                   }`}
                 >
-                  Message
+                  {t('contact.form.message')}
                 </label>
                 <textarea
                   id='message'
                   rows={6}
                   {...register('message', {
-                    required: 'Message is required',
+                    required: t('contact.form.validation.messageRequired'),
                     minLength: {
                       value: 10,
-                      message: 'Message must be at least 10 characters',
+                      message: t('contact.form.validation.messageMinLength'),
                     },
                   })}
                   className={`w-full px-4 py-3 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 resize-none ${
@@ -357,7 +355,7 @@ const Contact: React.FC = () => {
                         ? 'dark-input'
                         : 'light-input'
                   }`}
-                  placeholder='Your message...'
+                  placeholder={t('contact.form.message')}
                 />
                 {errors.message && (
                   <p className='text-red-500 text-sm mt-1'>
@@ -370,7 +368,7 @@ const Contact: React.FC = () => {
                 className='w-full btn-primary flex items-center justify-center space-x-2'
               >
                 <Send />
-                <span>Send Message</span>
+                <span>{t('contact.form.send')}</span>
               </button>
             </form>
           </motion.div>
@@ -399,14 +397,14 @@ const Contact: React.FC = () => {
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
                 }`}
               >
-                Message Sent!
+                {t('contact.form.success.title')}
               </h3>
               <p
                 className={`${
                   theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                 }`}
               >
-                Thank you for your message. I'll get back to you soon!
+                {t('contact.form.success.message')}
               </p>
             </div>
           </motion.div>
