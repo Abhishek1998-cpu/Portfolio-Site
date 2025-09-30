@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Menu,
-  Close,
-  LightMode,
-  DarkMode,
-} from '@mui/icons-material';
+import { Menu, Close, LightMode, DarkMode } from '@mui/icons-material';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 
