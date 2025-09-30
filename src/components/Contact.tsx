@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
   Email,
@@ -7,42 +7,13 @@ import {
   LinkedIn,
   GitHub,
   Twitter,
-  CheckCircle,
 } from '@mui/icons-material';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useForm } from 'react-hook-form';
-
-interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
 
 const Contact: React.FC = () => {
   const { theme } = useTheme();
   const { t } = useLanguage();
-  const [showSuccess, setShowSuccess] = useState(false);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<FormData>();
-
-  const onSubmit = (data: FormData) => {
-    console.log('Form submitted:', data);
-    // Show success popup
-    setShowSuccess(true);
-    // Reset form
-    reset();
-    // Hide success popup after 2 seconds
-    setTimeout(() => {
-      setShowSuccess(false);
-    }, 2000);
-  };
 
   const contactInfo = [
     {
@@ -216,7 +187,7 @@ const Contact: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Quick Message Section */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -231,194 +202,90 @@ const Contact: React.FC = () => {
                 theme === 'dark' ? 'text-white' : 'text-gray-800'
               }`}
             >
-              {t('contact.form.title')}
+              Send a Quick Message
             </h3>
-            <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
-              <div className='grid md:grid-cols-2 gap-6'>
-                <div>
-                  <label
-                    htmlFor='name'
-                    className={`block text-sm font-medium mb-2 ${
-                      theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-                    }`}
-                  >
-                    {t('contact.form.name')}
-                  </label>
-                  <input
-                    type='text'
-                    id='name'
-                    {...register('name', {
-                      required: t('contact.form.validation.nameRequired'),
-                      minLength: {
-                        value: 2,
-                        message: t('contact.form.validation.nameMinLength'),
-                      },
-                    })}
-                    className={`w-full px-4 py-3 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 ${
-                      errors.name
-                        ? 'input-error'
-                        : theme === 'dark'
-                          ? 'dark-input'
-                          : 'light-input'
-                    }`}
-                    placeholder={t('contact.form.name')}
-                  />
-                  {errors.name && (
-                    <p className='text-red-500 text-sm mt-1'>
-                      {errors.name.message}
-                    </p>
-                  )}
-                </div>
-                <div>
-                  <label
-                    htmlFor='email'
-                    className={`block text-sm font-medium mb-2 ${
-                      theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-                    }`}
-                  >
-                    {t('contact.form.email')}
-                  </label>
-                  <input
-                    type='email'
-                    id='email'
-                    {...register('email', {
-                      required: t('contact.form.validation.emailRequired'),
-                      pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: t('contact.form.validation.emailInvalid'),
-                      },
-                    })}
-                    className={`w-full px-4 py-3 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 ${
-                      errors.email
-                        ? 'input-error'
-                        : theme === 'dark'
-                          ? 'dark-input'
-                          : 'light-input'
-                    }`}
-                    placeholder={t('contact.form.email')}
-                  />
-                  {errors.email && (
-                    <p className='text-red-500 text-sm mt-1'>
-                      {errors.email.message}
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div>
-                <label
-                  htmlFor='subject'
-                  className={`block text-sm font-medium mb-2 ${
-                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-                  }`}
-                >
-                  {t('contact.form.subject')}
-                </label>
-                <input
-                  type='text'
-                  id='subject'
-                  {...register('subject', {
-                    required: t('contact.form.validation.subjectRequired'),
-                    minLength: {
-                      value: 5,
-                      message: 'Subject must be at least 5 characters',
-                    },
-                  })}
-                  className={`w-full px-4 py-3 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 ${
-                    errors.subject
-                      ? 'input-error'
-                      : theme === 'dark'
-                        ? 'dark-input'
-                        : 'light-input'
-                  }`}
-                  placeholder={t('contact.form.subject')}
-                />
-                {errors.subject && (
-                  <p className='text-red-500 text-sm mt-1'>
-                    {errors.subject.message}
-                  </p>
-                )}
-              </div>
-              <div>
-                <label
-                  htmlFor='message'
-                  className={`block text-sm font-medium mb-2 ${
-                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-                  }`}
-                >
-                  {t('contact.form.message')}
-                </label>
-                <textarea
-                  id='message'
-                  rows={6}
-                  {...register('message', {
-                    required: t('contact.form.validation.messageRequired'),
-                    minLength: {
-                      value: 10,
-                      message: t('contact.form.validation.messageMinLength'),
-                    },
-                  })}
-                  className={`w-full px-4 py-3 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 resize-none ${
-                    errors.message
-                      ? 'input-error'
-                      : theme === 'dark'
-                        ? 'dark-input'
-                        : 'light-input'
-                  }`}
-                  placeholder={t('contact.form.message')}
-                />
-                {errors.message && (
-                  <p className='text-red-500 text-sm mt-1'>
-                    {errors.message.message}
-                  </p>
-                )}
-              </div>
-              <button
-                type='submit'
-                className='w-full btn-primary flex items-center justify-center space-x-2'
+            
+            {/* Instructional Box */}
+            <div className={`p-4 rounded-lg border mb-6 ${
+              theme === 'dark' 
+                ? 'bg-primary-900/20 border-primary-700' 
+                : 'bg-primary-50 border-primary-200'
+            }`}>
+              <p className={`text-sm ${
+                theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+              }`}>
+                For the quickest response, please reach out via email or LinkedIn. You can click the email button below to open your default email client with my address pre-filled.
+              </p>
+            </div>
+
+            {/* Primary Email Button */}
+            <motion.a
+              href="mailto:abhishekverma998@gmail.com?subject=Portfolio Contact"
+              className={`w-full flex items-center justify-center space-x-3 py-4 px-6 rounded-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+                theme === 'dark' 
+                  ? 'bg-primary-600 hover:bg-primary-700' 
+                  : 'bg-primary-600 hover:bg-primary-700'
+              }`}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Send className="w-5 h-5" />
+              <span>Open Email Client</span>
+            </motion.a>
+
+            {/* Separator */}
+            <div className="flex items-center my-6">
+              <div className={`flex-1 h-px ${
+                theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'
+              }`}></div>
+              <span className={`px-4 text-sm ${
+                theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+              }`}>
+                or
+              </span>
+              <div className={`flex-1 h-px ${
+                theme === 'dark' ? 'bg-gray-600' : 'bg-gray-300'
+              }`}></div>
+            </div>
+
+            {/* Social Buttons */}
+            <div className="grid grid-cols-2 gap-4">
+              <motion.a
+                href="https://www.linkedin.com/in/abhishek-verma-998/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center justify-center space-x-3 py-3 px-4 rounded-lg border transition-all duration-300 hover:scale-105 ${
+                  theme === 'dark'
+                    ? 'bg-gray-800 border-gray-600 text-white hover:bg-gray-700'
+                    : 'bg-white border-gray-300 text-gray-800 hover:bg-gray-50'
+                }`}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <Send />
-                <span>{t('contact.form.send')}</span>
-              </button>
-            </form>
+                <LinkedIn className="w-5 h-5" />
+                <span className="font-medium">LinkedIn</span>
+              </motion.a>
+
+              <motion.a
+                href="https://github.com/Abhishek1998-cpu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center justify-center space-x-3 py-3 px-4 rounded-lg border transition-all duration-300 hover:scale-105 ${
+                  theme === 'dark'
+                    ? 'bg-gray-800 border-gray-600 text-white hover:bg-gray-700'
+                    : 'bg-white border-gray-300 text-gray-800 hover:bg-gray-50'
+                }`}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <GitHub className="w-5 h-5" />
+                <span className="font-medium">GitHub</span>
+              </motion.a>
+            </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Success Popup */}
-      {showSuccess && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
-          className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'
-        >
-          <motion.div
-            initial={{ y: 20 }}
-            animate={{ y: 0 }}
-            className={`p-8 rounded-xl shadow-2xl max-w-md mx-4 ${
-              theme === 'dark' ? 'bg-gray-900' : 'bg-white'
-            }`}
-          >
-            <div className='text-center'>
-              <CheckCircle className='w-16 h-16 text-green-500 mx-auto mb-4' />
-              <h3
-                className={`text-2xl font-bold mb-2 ${
-                  theme === 'dark' ? 'text-white' : 'text-gray-800'
-                }`}
-              >
-                {t('contact.form.success.title')}
-              </h3>
-              <p
-                className={`${
-                  theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
-                }`}
-              >
-                {t('contact.form.success.message')}
-              </p>
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
     </section>
   );
 };
