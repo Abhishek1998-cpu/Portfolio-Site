@@ -68,7 +68,7 @@ const Header: React.FC = () => {
               />
             </div>
             <span
-              className={`text-xl font-medium ${
+              className={`text-md font-medium ${
                 theme === 'dark' ? 'text-white' : 'text-gray-800'
               }`}
             >
@@ -151,6 +151,7 @@ const Header: React.FC = () => {
                 ? 'bg-gray-900 border-gray-700'
                 : 'bg-white border-gray-200'
             } border-t py-4`}
+            style={{ padding: '1rem' }}
           >
             <div className='flex flex-col space-y-4'>
               {navItems.map(item => (
