@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
       title: t('projects.ecommerce.title'),
       description: t('projects.ecommerce.description'),
       image: '/api/placeholder/600/400',
-      technologies: t('projects.ecommerce.technologies', { returnObjects: true }),
+      technologies: ['React', 'Node.js', 'Machine Learning', 'MongoDB', 'REST APIs'],
       github: 'https://github.com/Abhishek1998-cpu',
       live: 'https://extensions.fynd.com/extensions/product-recommendation',
       featured: true,
@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
       title: t('projects.extension.title'),
       description: t('projects.extension.description'),
       image: '/api/placeholder/600/400',
-      technologies: t('projects.extension.technologies', { returnObjects: true }),
+      technologies: ['Vue.js', 'Express', 'PostgreSQL', 'Redis', 'Payment Gateway'],
       github: 'https://github.com/Abhishek1998-cpu',
       live: 'https://www.fyndcoupons.com/',
       featured: true,
@@ -31,7 +31,7 @@ const Projects: React.FC = () => {
       title: t('projects.mobile.title'),
       description: t('projects.mobile.description'),
       image: '/api/placeholder/600/400',
-      technologies: t('projects.mobile.technologies', { returnObjects: true }),
+      technologies: ['JavaScript', 'Chrome APIs', 'Web Scraping', 'React', 'Firebase'],
       github: 'https://github.com/Abhishek1998-cpu',
       live: 'https://extensions.fynd.com/extensions/frolic',
       featured: true,
@@ -163,7 +163,7 @@ const Projects: React.FC = () => {
                   {project.description}
                 </p>
                 <div className='flex flex-wrap gap-2 mb-6'>
-                  {project.technologies.map(tech => (
+                  {project.technologies.map((tech: string) => (
                     <span
                       key={tech}
                       className={`px-3 py-1 rounded-full text-sm font-medium ${
@@ -250,7 +250,7 @@ const Projects: React.FC = () => {
                     {project.description}
                   </p>
                   <div className='flex flex-wrap gap-1 mb-3'>
-                    {project.technologies.slice(0, 3).map(tech => (
+                    {project.technologies.slice(0, 3).map((tech: string) => (
                       <span
                         key={tech}
                         className={`px-2 py-1 rounded text-xs ${
