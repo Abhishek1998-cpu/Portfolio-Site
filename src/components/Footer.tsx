@@ -218,6 +218,7 @@ const Footer: React.FC = () => {
           className={`border-t py-6 ${
             theme === 'dark' ? 'border-gray-800' : 'border-gray-700'
           }`}
+          style={{paddingRight: "1rem", paddingLeft: "1rem"}}
         >
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <motion.p
@@ -229,7 +230,7 @@ const Footer: React.FC = () => {
                 theme === 'dark' ? 'text-gray-500' : 'text-gray-400'
               }`}
             >
-              © 2024 Abhishek Verma. {t('footer.copyright')}
+              {t('footer.copyright')}
             </motion.p>
 
             <motion.button

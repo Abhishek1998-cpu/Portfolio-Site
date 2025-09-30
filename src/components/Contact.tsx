@@ -76,11 +76,20 @@ const Contact: React.FC = () => {
   return (
     <section
       id='contact'
-      className={`section-padding ${
+      className={`section-padding relative ${
         theme === 'dark' ? 'bg-gray-800' : 'bg-gray-50'
       }`}
     >
-      <div className='container-max'>
+      {/* Background Pattern */}
+      <div className='absolute inset-0 opacity-5'>
+        <div className='absolute top-24 left-8 sm:left-24 w-48 sm:w-68 h-48 sm:h-68 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse'></div>
+        <div className='absolute top-8 right-20 sm:right-40 w-32 sm:w-44 h-32 sm:h-44 bg-primary-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2800'></div>
+        <div className='absolute bottom-20 left-12 sm:left-28 w-40 sm:w-56 h-40 sm:h-56 bg-primary-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-1200'></div>
+        <div className='absolute top-48 right-4 sm:right-12 w-36 sm:w-48 h-36 sm:h-48 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-3600'></div>
+        <div className='absolute bottom-4 right-32 sm:right-56 w-24 sm:w-32 h-24 sm:h-32 bg-primary-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-600'></div>
+      </div>
+
+      <div className='container-max relative z-10'>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

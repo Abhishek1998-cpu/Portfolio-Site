@@ -86,11 +86,20 @@ const Projects: React.FC = () => {
   return (
     <section
       id='projects'
-      className={`section-padding ${
+      className={`section-padding relative ${
         theme === 'dark' ? 'bg-gray-900' : 'bg-white'
       }`}
     >
-      <div className='container-max'>
+      {/* Background Pattern */}
+      <div className='absolute inset-0 opacity-5'>
+        <div className='absolute top-12 left-16 sm:left-32 w-52 sm:w-76 h-52 sm:h-76 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse'></div>
+        <div className='absolute top-64 right-8 sm:right-16 w-28 sm:w-40 h-28 sm:h-40 bg-primary-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-1800'></div>
+        <div className='absolute bottom-12 right-24 sm:right-48 w-44 sm:w-60 h-44 sm:h-60 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-3200'></div>
+        <div className='absolute top-40 left-4 sm:left-8 w-36 sm:w-48 h-36 sm:h-48 bg-primary-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-800'></div>
+        <div className='absolute bottom-32 left-20 sm:left-36 w-32 sm:w-44 h-32 sm:h-44 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2200'></div>
+      </div>
+
+      <div className='container-max relative z-10'>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

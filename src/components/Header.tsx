@@ -77,7 +77,7 @@ const Header: React.FC = () => {
                 theme === 'dark' ? 'text-white' : 'text-gray-800'
               }`}
             >
-              Abhishek Verma
+              You're Welcome
             </span>
           </div>
 

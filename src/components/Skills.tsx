@@ -46,11 +46,19 @@ const Skills: React.FC = () => {
   return (
     <section
       id='skills'
-      className={`section-padding ${
+      className={`section-padding relative ${
         theme === 'dark' ? 'bg-gray-800' : 'bg-gray-50'
       }`}
     >
-      <div className='container-max'>
+      {/* Background Pattern */}
+      <div className='absolute inset-0 opacity-5'>
+        <div className='absolute top-8 left-20 sm:left-48 w-44 sm:w-64 h-44 sm:h-64 bg-primary-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse'></div>
+        <div className='absolute top-56 right-12 sm:right-28 w-36 sm:w-52 h-36 sm:h-52 bg-primary-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-3000'></div>
+        <div className='absolute bottom-8 left-4 sm:left-12 w-40 sm:w-56 h-40 sm:h-56 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-1500'></div>
+        <div className='absolute top-24 right-4 sm:right-8 w-32 sm:w-44 h-32 sm:h-44 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2500'></div>
+      </div>
+
+      <div className='container-max relative z-10'>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
