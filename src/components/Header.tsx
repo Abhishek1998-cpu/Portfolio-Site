@@ -68,7 +68,7 @@ const Header: React.FC = () => {
               />
             </div>
             <span
-              className={`text-xl font-bold ${
+              className={`text-xl font-medium ${
                 theme === 'dark' ? 'text-white' : 'text-gray-800'
               }`}
             >
