@@ -13,7 +13,7 @@
     "greeting": "Hola, soy",
     "name": "Abhishek",
     "title": "Ingeniero de Software Full Stack",
-    "description": "Me especializo en la creación de soluciones de comercio electrónico innovadoras, extensiones de navegador y aplicaciones móviles que mejoran las experiencias del usuario e impulsan el crecimiento empresarial.",
+    "description": "4+ años de experiencia construyendo aplicaciones web escalables, apasionado por el código limpio, diseño de sistemas y resolviendo problemas del mundo real.",
     "downloadResume": "Descargar CV",
     "viewWork": "Ver mi trabajo"
   },
@@ -60,17 +60,17 @@
     "subtitle": "Algunos de mis trabajos recientes y proyectos personales",
     "ecommerce": {
       "title": "Plataforma E-commerce",
-      "description": "Una solución e-commerce full-stack con interfaz moderna, integración de pagos y panel de administración.",
+      "description": "Una solución e-commerce full-stack con interfaz moderna, integración de pagos y panel de administración. Fue una de las plataformas omnicanal más grandes de India.",
       "technologies": ["React", "Node.js", "MongoDB", "Stripe"]
     },
     "extension": {
       "title": "Extensión de Navegador",
-      "description": "Una extensión de navegador de productividad que ayuda a los usuarios a gestionar sus tareas diarias y mejorar su flujo de trabajo.",
+      "description": "Una extensión de plataforma de productividad. Esta extensión fue un proyecto de MEVN Stack agregando funcionalidad adicional a una plataforma existente según los requisitos del cliente. Juega un papel muy vital en la gestión empresarial y sus requisitos personalizados",
       "technologies": ["JavaScript", "Chrome APIs", "HTML", "CSS"]
     },
     "mobile": {
       "title": "Aplicación Móvil",
-      "description": "Una aplicación móvil multiplataforma para gestión de tareas con sincronización en tiempo real.",
+      "description": "Trabajé en varias aplicaciones móviles multiplataforma para gestión de tareas con sincronización en tiempo real. Utilicé React Native y trabajé en estos dominios: salud, finanzas y educación.",
       "technologies": ["React Native", "Firebase", "Redux"]
     },
     "github": "GitHub",
@@ -119,7 +119,7 @@
     "quickLinks": "Enlaces Rápidos",
     "getInTouch": "Ponerse en Contacto",
     "social": "Sígueme",
-    "copyright": "© 2025 - Build in progress. Todos los derechos reservados.",
+    "copyright": "© 2025 - Build in progress.  Todos los derechos reservados.",
     "language": "Idioma"
   }
 }

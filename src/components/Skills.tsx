@@ -11,22 +11,22 @@ const Skills: React.FC = () => {
     {
       title: t('skills.categories.frontend'),
       skills: [
-        { name: 'React', level: 95 },
-        { name: 'React Native', level: 90 },
-        { name: 'TypeScript', level: 90 },
+        { name: 'React', level: 75 },
+        { name: 'React Native', level: 60 },
+        { name: 'TypeScript', level: 40 },
         { name: 'Vue.js', level: 85 },
-        { name: 'JavaScript', level: 95 },
-        { name: 'Tailwind CSS', level: 90 },
+        { name: 'JavaScript', level: 90 },
+        { name: 'Tailwind CSS', level: 70 },
       ],
     },
     {
       title: t('skills.categories.backend'),
       skills: [
-        { name: 'Node.js', level: 90 },
+        { name: 'Node.js', level: 80 },
         { name: 'Express.js', level: 90 },
-        { name: 'Python', level: 85 },
-        { name: 'MongoDB', level: 85 },
-        { name: 'PostgreSQL', level: 80 },
+        { name: 'Python', level: 65 },
+        { name: 'MongoDB', level: 40 },
+        { name: 'PostgreSQL', level: 40 },
         { name: 'REST APIs', level: 95 },
       ],
     },
@@ -34,11 +34,11 @@ const Skills: React.FC = () => {
       title: t('skills.categories.tools'),
       skills: [
         { name: 'Git', level: 95 },
-        { name: 'Firebase', level: 85 },
-        { name: 'AWS', level: 80 },
-        { name: 'Chrome Extensions', level: 90 },
-        { name: 'Web Scraping', level: 85 },
-        { name: 'Machine Learning', level: 75 },
+        { name: 'Firebase', level: 55 },
+        { name: 'AWS', level: 50 },
+        { name: 'Software Extensions', level: 90 },
+        { name: 'Web Scraping', level: 75 },
+        { name: 'Machine Learning', level: 35 },
       ],
     },
   ];
@@ -169,7 +169,7 @@ const Skills: React.FC = () => {
           <div className='flex flex-wrap justify-center gap-4'>
             {[
               'E-commerce Development',
-              'Browser Extensions',
+              'Platform Extensions',
               'Mobile App Development',
               'API Integration',
               'Data Analytics',

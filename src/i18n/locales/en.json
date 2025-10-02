@@ -13,7 +13,7 @@
     "greeting": "Hi, I'm",
     "name": "Abhishek",
     "title": "Full Stack Software Engineer",
-    "description": "I specialize in building innovative e-commerce solutions, browser extensions, and mobile applications that enhance user experiences and drive business growth.",
+    "description": "4+ years of experience building scalable web applications, passionate about clean code, system design, and solving real-world problems.",
     "downloadResume": "Download Resume",
     "viewWork": "View My Work"
   },
@@ -60,17 +60,17 @@
     "subtitle": "Some of my recent work and personal projects",
     "ecommerce": {
       "title": "E-commerce Platform",
-      "description": "A full-stack e-commerce solution with modern UI, payment integration, and admin dashboard.",
+      "description": "A full-stack e-commerce solution with modern UI, payment integration, and admin dashboard. It was one of the India's largest Omni-channel platforms.",
       "technologies": ["React", "Node.js", "MongoDB", "Stripe"]
     },
     "extension": {
-      "title": "Browser Extension",
-      "description": "A productivity browser extension that helps users manage their daily tasks and improve workflow.",
+      "title": "Platform Extension",
+      "description": "A productivity platform extension. This extension was a MEVN Stack project adding additional functionality to an existing platform as per client requirements. It plays a very vital role in managing business and their custom requirements",
       "technologies": ["JavaScript", "Chrome APIs", "HTML", "CSS"]
     },
     "mobile": {
       "title": "Mobile App",
-      "description": "A cross-platform mobile application for task management with real-time synchronization.",
+      "description": "Worked on various cross-platform mobile application for task management with real-time synchronization. Used React Native and worked in these domains - healthcare, finance, and education.",
       "technologies": ["React Native", "Firebase", "Redux"]
     },
     "github": "GitHub",

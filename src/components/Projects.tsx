@@ -13,7 +13,13 @@ const Projects: React.FC = () => {
       title: t('projects.ecommerce.title'),
       description: t('projects.ecommerce.description'),
       image: '/api/placeholder/600/400',
-      technologies: ['React', 'Node.js', 'Machine Learning', 'MongoDB', 'REST APIs'],
+      technologies: [
+        'React',
+        'Node.js',
+        'Machine Learning',
+        'MongoDB',
+        'REST APIs',
+      ],
       github: 'https://github.com/Abhishek1998-cpu',
       live: 'https://extensions.fynd.com/extensions/product-recommendation',
       featured: true,
@@ -22,7 +28,13 @@ const Projects: React.FC = () => {
       title: t('projects.extension.title'),
       description: t('projects.extension.description'),
       image: '/api/placeholder/600/400',
-      technologies: ['Vue.js', 'Express', 'PostgreSQL', 'Redis', 'Payment Gateway'],
+      technologies: [
+        'Vue.js',
+        'Express',
+        'PostgreSQL',
+        'Redis',
+        'Payment Gateway',
+      ],
       github: 'https://github.com/Abhishek1998-cpu',
       live: 'https://www.fyndcoupons.com/',
       featured: true,
@@ -31,15 +43,21 @@ const Projects: React.FC = () => {
       title: t('projects.mobile.title'),
       description: t('projects.mobile.description'),
       image: '/api/placeholder/600/400',
-      technologies: ['JavaScript', 'Chrome APIs', 'Web Scraping', 'React', 'Firebase'],
+      technologies: [
+        'JavaScript',
+        'Chrome APIs',
+        'Web Scraping',
+        'React',
+        'Firebase',
+      ],
       github: 'https://github.com/Abhishek1998-cpu',
       live: 'https://extensions.fynd.com/extensions/frolic',
       featured: true,
     },
     {
-      title: 'Fynd Mobile App',
+      title: 'Lending Mobile App',
       description:
-        'A cross-platform mobile application for the Fynd platform with offline capabilities, push notifications, and smooth user experience.',
+        'A cross-platform mobile application, the name is similar to Lending Mobile App. It was a loan and finance management App - sub category of FinTech.',
       image: '/api/placeholder/600/400',
       technologies: [
         'React Native',
@@ -53,9 +71,9 @@ const Projects: React.FC = () => {
       featured: false,
     },
     {
-      title: 'Portfolio Website',
+      title: 'Medical Ops',
       description:
-        'A modern, responsive portfolio website showcasing projects, skills, and professional experience with smooth animations and interactive elements.',
+        'A modern, responsive Patient Management Application for clinics and hospitals to streamline patient records, appointments, and billing.',
       image: '/api/placeholder/600/400',
       technologies: [
         'React',
@@ -69,11 +87,11 @@ const Projects: React.FC = () => {
       featured: false,
     },
     {
-      title: 'E-commerce Analytics Dashboard',
+      title: 'K-NFT',
       description:
-        'A comprehensive analytics platform for tracking sales, user behavior, and business metrics with real-time data visualization.',
+        'A comprehensive NFT based Saas platform that enables marketplace to create, buy, sell, and manage NFTs with ease.',
       image: '/api/placeholder/600/400',
-      technologies: ['Next.js', 'D3.js', 'Python', 'FastAPI', 'PostgreSQL'],
+      technologies: ['React', "Node", "PostgreSQL", "AWS", "Docker"],
       github: 'https://github.com/Abhishek1998-cpu',
       live: '#',
       featured: false,

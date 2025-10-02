@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                 }`}
               >
                 Full Stack Software Engineer specializing in e-commerce
-                solutions, mobile applications, and browser extensions that
+                solutions, mobile applications, and platform extensions that
                 drive business growth.
               </p>
             </motion.div>

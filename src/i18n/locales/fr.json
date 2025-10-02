@@ -13,7 +13,7 @@
     "greeting": "Salut, je suis",
     "name": "Abhishek",
     "title": "Ingénieur Logiciel Full Stack",
-    "description": "Je me spécialise dans la création de solutions e-commerce innovantes, d'extensions de navigateur et d'applications mobiles qui améliorent l'expérience utilisateur et stimulent la croissance de l'entreprise.",
+    "description": "4+ années d'expérience dans la création d'applications web évolutives, passionné par le code propre, la conception de systèmes et la résolution de problèmes réels.",
     "downloadResume": "Télécharger le CV",
     "viewWork": "Voir mon travail"
   },
@@ -60,17 +60,17 @@
     "subtitle": "Quelques-uns de mes travaux récents et projets personnels",
     "ecommerce": {
       "title": "Plateforme E-commerce",
-      "description": "Une solution e-commerce full-stack avec une interface moderne, l'intégration de paiement et un tableau de bord administrateur.",
+      "description": "Une solution e-commerce full-stack avec une interface moderne, l'intégration de paiement et un tableau de bord administrateur. C'était l'une des plus grandes plateformes omnicanal de l'Inde.",
       "technologies": ["React", "Node.js", "MongoDB", "Stripe"]
     },
     "extension": {
       "title": "Extension de Navigateur",
-      "description": "Une extension de navigateur de productivité qui aide les utilisateurs à gérer leurs tâches quotidiennes et à améliorer leur flux de travail.",
+      "description": "Une extension de plateforme de productivité. Cette extension était un projet MEVN Stack ajoutant des fonctionnalités supplémentaires à une plateforme existante selon les exigences du client. Elle joue un rôle très important dans la gestion des entreprises et leurs exigences personnalisées",
       "technologies": ["JavaScript", "Chrome APIs", "HTML", "CSS"]
     },
     "mobile": {
       "title": "Application Mobile",
-      "description": "Une application mobile multiplateforme pour la gestion des tâches avec synchronisation en temps réel.",
+      "description": "J'ai travaillé sur diverses applications mobiles multiplateformes pour la gestion des tâches avec synchronisation en temps réel. J'ai utilisé React Native et travaillé dans ces domaines : santé, finance et éducation.",
       "technologies": ["React Native", "Firebase", "Redux"]
     },
     "github": "GitHub",
@@ -119,7 +119,7 @@
     "quickLinks": "Liens Rapides",
     "getInTouch": "Entrer en Contact",
     "social": "Suivez-moi",
-    "copyright": "© 2025 - Build in progress. Tous droits réservés.",
+    "copyright": "© 2025 - Build in progress.  Tous droits réservés.",
     "language": "Langue"
   }
 }

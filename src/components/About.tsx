@@ -22,7 +22,7 @@ const About: React.FC = () => {
     {
       icon: Web,
       title: 'E-commerce Solutions',
-      description: 'Payment Integration, Browser Extensions, Mobile Apps',
+      description: 'Payment Integration, Platform Extensions, Mobile Apps',
     },
     {
       icon: Cloud,
@@ -114,7 +114,7 @@ const About: React.FC = () => {
                 }`}
               >
                 <div className='text-3xl font-bold text-primary-600 mb-2'>
-                  50+
+                  7+
                 </div>
                 <div
                   className={
