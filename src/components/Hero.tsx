@@ -37,6 +37,16 @@ const Hero: React.FC = () => {
     link.click();
     document.body.removeChild(link);
   };
+  
+  const handleViewWork = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
 
   return (
     <section
@@ -135,6 +145,7 @@ const Hero: React.FC = () => {
               <span>{t('hero.downloadResume')}</span>
             </button>
             <button
+              onClick={handleViewWork}
               className={
                 theme === 'dark' ? 'btn-secondary-dark' : 'btn-secondary'
               }
