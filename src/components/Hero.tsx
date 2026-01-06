@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
           >
             <div className='w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-primary-600'>
               <img
-                src='https://media.licdn.com/dms/image/v2/C4D03AQGR7hBMUql5AQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1660478240430?e=1761782400&v=beta&t=z4WU2zxfybXRgDZLXo76f-pDvxW_u05idqjD2ClfN2o'
+                src='https://media.licdn.com/dms/image/v2/C4D03AQGR7hBMUql5AQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1660478240430?e=1769040000&v=beta&t=0hd0XB3twITEQJybW4qojpzgWXTritkXMeaKGnEdoPk'
                 alt='Abhishek Verma'
                 className='w-full h-full object-cover'
               />

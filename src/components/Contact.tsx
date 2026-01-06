@@ -251,7 +251,7 @@ const Contact: React.FC = () => {
             {/* Social Buttons */}
             <div className="grid grid-cols-2 gap-4">
               <motion.a
-                href="https://www.linkedin.com/in/abhishek-verma-998/"
+                href="https://www.linkedin.com/in/abhishek-verma-b790921a0/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center justify-center space-x-3 py-3 px-4 rounded-lg border transition-all duration-300 hover:scale-105 ${

@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
               <div className='flex items-center space-x-2 mb-4'>
                 <div className='w-10 h-10 rounded-lg overflow-hidden'>
                   <img
-                    src='https://media.licdn.com/dms/image/v2/C4D03AQGR7hBMUql5AQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1660478240430?e=1761782400&v=beta&t=z4WU2zxfybXRgDZLXo76f-pDvxW_u05idqjD2ClfN2o'
+                    src='https://media.licdn.com/dms/image/v2/C4D03AQGR7hBMUql5AQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1660478240430?e=1769040000&v=beta&t=0hd0XB3twITEQJybW4qojpzgWXTritkXMeaKGnEdoPk'
                     alt='Abhishek Verma'
                     className='w-full h-full object-cover'
                   />
