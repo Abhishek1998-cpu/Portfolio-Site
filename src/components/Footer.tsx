@@ -20,7 +20,9 @@ const Footer: React.FC = () => {
   };
 
   const handleLanguageChange = (lang: string) => {
-    setLanguage(lang as any);
+    if (['en', 'hi', 'fr', 'es', 'ur', 'pa'].includes(lang)) {
+      setLanguage(lang as 'en' | 'hi' | 'fr' | 'es' | 'ur' | 'pa');
+    }
     setIsLanguageDropdownOpen(false);
   };
 

@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/Abhishek_Verma_CSE_31_June_2025 (1).pdf';
+    link.href = `${import.meta.env.BASE_URL}Abhishek_Verma_CSE_31_December.pdf`;
     link.download = 'Abhishek_Verma_Resume.pdf';
     document.body.appendChild(link);
     link.click();

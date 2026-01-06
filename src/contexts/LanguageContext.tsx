@@ -27,7 +27,7 @@ const languageNames = {
   pa: 'ਪੰਜਾਬੀ',
 };
 
-export const LanguageProvider: React.FC<{ children: any }> = ({
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const { i18n, t } = useTranslation();
@@ -55,6 +55,7 @@ export const LanguageProvider: React.FC<{ children: any }> = ({
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (context === undefined) {
@@ -63,4 +64,5 @@ export const useLanguage = () => {
   return context;
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { languageNames };
