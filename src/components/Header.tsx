@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, Close, LightMode, DarkMode } from '@mui/icons-material';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -62,7 +63,7 @@ const Header: React.FC = () => {
           <div className='flex items-center space-x-2'>
             <div className='w-10 h-10 rounded-lg overflow-hidden'>
               <img
-                src='https://media.licdn.com/dms/image/v2/C4D03AQGR7hBMUql5AQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1660478240430?e=1769040000&v=beta&t=0hd0XB3twITEQJybW4qojpzgWXTritkXMeaKGnEdoPk'
+                src='https://fra.cloud.appwrite.io/v1/storage/buckets/pizza-mate-bucket/files/69bbab48002caa9dd36f/view?project=69748622002fa8040371&mode=admin'
                 alt='Abhishek Verma'
                 className='w-full h-full object-cover'
               />
@@ -99,6 +100,16 @@ const Header: React.FC = () => {
             <button onClick={handleDownloadResume} className='btn-primary'>
               {t('header.downloadResume')}
             </button>
+            {/* <Link
+              to='/dulyplan'
+              className={`px-4 py-2 rounded-lg font-medium transition-colors duration-300 ${
+                theme === 'dark'
+                  ? 'text-gray-300 hover:text-primary-400'
+                  : 'text-gray-700 hover:text-primary-600'
+              }`}
+            >
+              DulyPlan Demo
+            </Link> */}
             <button
               onClick={toggleTheme}
               className={`p-2 rounded-lg transition-all duration-300 ${
@@ -173,6 +184,16 @@ const Header: React.FC = () => {
               >
                 {t('header.downloadResume')}
               </button>
+              {/* <Link
+                to='/dulyplan'
+                className={`w-full px-4 py-2 rounded-lg font-medium text-center transition-colors duration-300 mt-2 ${
+                  theme === 'dark'
+                    ? 'text-gray-300 hover:text-primary-400'
+                    : 'text-gray-700 hover:text-primary-600'
+                }`}
+              >
+                DulyPlan Demo
+              </Link> */}
             </div>
           </div>
         )}

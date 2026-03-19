@@ -1,5 +1,6 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider as CustomThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import Header from './components/Header';
@@ -9,6 +10,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import DulyPlan from './components/DulyPlan';
 
 const theme = createTheme({
   palette: {
@@ -24,26 +26,37 @@ const theme = createTheme({
   },
 });
 
+function Portfolio() {
+  return (
+    <div className='App'>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
 function App() {
   return (
-    <LanguageProvider>
-      <CustomThemeProvider>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <div className='App'>
-            <Header />
-            <main>
-              <Hero />
-              <About />
-              <Skills />
-              <Projects />
-              <Contact />
-            </main>
-            <Footer />
-          </div>
-        </ThemeProvider>
-      </CustomThemeProvider>
-    </LanguageProvider>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <LanguageProvider>
+        <CustomThemeProvider>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Routes>
+              <Route path='/' element={<Portfolio />} />
+              <Route path='/dulyplan' element={<DulyPlan />} />
+            </Routes>
+          </ThemeProvider>
+        </CustomThemeProvider>
+      </LanguageProvider>
+    </BrowserRouter>
   );
 }
 

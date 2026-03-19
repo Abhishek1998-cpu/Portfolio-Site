@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
               <div className='flex items-center space-x-2 mb-4'>
                 <div className='w-10 h-10 rounded-lg overflow-hidden'>
                   <img
-                    src='https://media.licdn.com/dms/image/v2/C4D03AQGR7hBMUql5AQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1660478240430?e=1769040000&v=beta&t=0hd0XB3twITEQJybW4qojpzgWXTritkXMeaKGnEdoPk'
+                    src='https://fra.cloud.appwrite.io/v1/storage/buckets/pizza-mate-bucket/files/69bbab48002caa9dd36f/view?project=69748622002fa8040371&mode=admin'
                     alt='Abhishek Verma'
                     className='w-full h-full object-cover'
                   />
