@@ -36,8 +36,8 @@ const Header: React.FC = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = `${import.meta.env.BASE_URL}Abhishek_Verma_CSE_31_December.pdf`;
-    link.download = 'Abhishek_Verma_Resume.pdf';
+    link.href = `${import.meta.env.BASE_URL}Abhishek_Verma_AI_Frontend_Engineering.pdf`;
+    link.download = 'Abhishek_Verma_AI_Frontend_Engineering.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
