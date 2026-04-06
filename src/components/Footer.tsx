@@ -40,6 +40,14 @@ const Footer: React.FC = () => {
     { icon: Email, href: 'mailto:abhishekverma998@gmail.com', label: 'Email' },
   ];
 
+  const quickLinks = [
+    { label: t('header.nav.about'), href: '#about' },
+    { label: t('header.nav.skills'), href: '#skills' },
+    { label: t('header.nav.accessibility'), href: '#accessibility' },
+    { label: t('header.nav.projects'), href: '#projects' },
+    { label: t('header.nav.contact'), href: '#contact' },
+  ];
+
   return (
     <footer
       className={`text-white ${theme === 'dark' ? 'bg-black' : 'bg-gray-800'}`}
@@ -88,13 +96,13 @@ const Footer: React.FC = () => {
             >
               <h3 className='text-lg font-semibold mb-4'>{t('footer.quickLinks')}</h3>
               <ul className='space-y-2'>
-                {[t('header.nav.about'), t('header.nav.skills'), t('header.nav.projects'), t('header.nav.contact')].map(link => (
-                  <li key={link}>
+                {quickLinks.map(link => (
+                  <li key={link.href}>
                     <a
-                      href={`#${link.toLowerCase()}`}
+                      href={link.href}
                       className='text-gray-300 hover:text-primary-400 transition-colors duration-300'
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}

@@ -4,6 +4,7 @@
       "home": "ہوم",
       "about": "میرے بارے میں",
       "skills": "مہارتیں",
+      "accessibility": "رسائی",
       "projects": "پروجیکٹس",
       "contact": "رابطہ کریں"
     },
@@ -53,6 +54,18 @@
       "tools": "ٹولز اور ٹیکنالوجیز"
     },
     "additionalSkills": "اضافی مہارتیں"
+  },
+  "accessibility": {
+    "title": "ویب",
+    "highlight": "رسائی",
+    "subtitle": "پروڈکٹ لائف سائیکل میں جامع ڈیولپمنٹ اور ایکسیسبلیٹی ٹیسٹنگ",
+    "sectionTitle": "ڈیولپمنٹ اور ٹیسٹنگ کا تجربہ",
+    "points": {
+      "point1": "Semantic HTML، ARIA roles، focus management اور keyboard-first interactions کے ساتھ جامع UI تیار کیا۔",
+      "point2": "حقیقی یوزر فلو کے لیے NVDA اور keyboard-only navigation کے ساتھ manual accessibility testing کی۔",
+      "point3": "Axe DevTools کے ذریعے automated audits چلائے اور contrast، labels، landmarks اور form validation issues حل کیے۔",
+      "point4": "Development اور QA کے دوران defects fix کرکے WCAG 2.1 AA alignment بہتر کی۔"
+    }
   },
   "projects": {
     "title": "میرے",

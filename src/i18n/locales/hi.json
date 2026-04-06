@@ -4,6 +4,7 @@
       "home": "होम",
       "about": "मेरे बारे में",
       "skills": "कौशल",
+      "accessibility": "एक्सेसिबिलिटी",
       "projects": "परियोजनाएं",
       "contact": "संपर्क करें"
     },
@@ -53,6 +54,18 @@
       "tools": "टूल्स और तकनीकें"
     },
     "additionalSkills": "अतिरिक्त कौशल"
+  },
+  "accessibility": {
+    "title": "वेब",
+    "highlight": "एक्सेसिबिलिटी",
+    "subtitle": "पूरे प्रोडक्ट लाइफसाइकल में समावेशी डेवलपमेंट और एक्सेसिबिलिटी टेस्टिंग",
+    "sectionTitle": "डेवलपमेंट और टेस्टिंग अनुभव",
+    "points": {
+      "point1": "सेमांटिक HTML, ARIA roles, focus management और keyboard-first interactions के साथ समावेशी इंटरफेस बनाना।",
+      "point2": "वास्तविक यूजर जर्नी के लिए NVDA और keyboard-only navigation के साथ manual accessibility testing करना।",
+      "point3": "Axe DevTools से automated audits चलाकर contrast, labels, landmarks और form validation feedback से जुड़ी समस्याएं ठीक करना।",
+      "point4": "डेवलपमेंट और QA के दौरान accessibility defects ठीक करके WCAG 2.1 AA alignment बेहतर करना।"
+    }
   },
   "projects": {
     "title": "मेरी",

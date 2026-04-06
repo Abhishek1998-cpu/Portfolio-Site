@@ -4,6 +4,7 @@
       "home": "Inicio",
       "about": "Acerca de",
       "skills": "Habilidades",
+      "accessibility": "Accesibilidad",
       "projects": "Proyectos",
       "contact": "Contacto"
     },
@@ -53,6 +54,18 @@
       "tools": "Herramientas y Tecnologías"
     },
     "additionalSkills": "Habilidades Adicionales"
+  },
+  "accessibility": {
+    "title": "Web",
+    "highlight": "Accesibilidad",
+    "subtitle": "Desarrollo inclusivo y pruebas de accesibilidad a lo largo del ciclo de vida del producto",
+    "sectionTitle": "Experiencia en Desarrollo y Pruebas",
+    "points": {
+      "point1": "Construyo interfaces inclusivas usando HTML semántico, roles ARIA, gestión de foco e interacciones orientadas al teclado.",
+      "point2": "Realizo pruebas manuales de accesibilidad con NVDA y navegación solo con teclado en flujos reales de usuario.",
+      "point3": "Ejecuto auditorías automáticas con Axe DevTools y corrijo problemas de contraste, etiquetas, landmarks y validación de formularios.",
+      "point4": "Mejoro la alineación con WCAG 2.1 AA corrigiendo defectos de accesibilidad durante desarrollo y QA, no solo antes de release."
+    }
   },
   "projects": {
     "title": "Mis",

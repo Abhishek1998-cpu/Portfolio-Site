@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
+import Accessibility from './components/Accessibility';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -34,6 +35,7 @@ function Portfolio() {
         <Hero />
         <About />
         <Skills />
+        <Accessibility />
         <Projects />
         <Contact />
       </main>

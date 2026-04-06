@@ -4,6 +4,7 @@
       "home": "ਮੁੱਖ ਪੰਨਾ",
       "about": "ਮੇਰੇ ਬਾਰੇ",
       "skills": "ਹੁਨਰ",
+      "accessibility": "ਪਹੁੰਚਯੋਗਤਾ",
       "projects": "ਪ੍ਰੋਜੈਕਟ",
       "contact": "ਸੰਪਰਕ ਕਰੋ"
     },
@@ -53,6 +54,18 @@
       "tools": "ਟੂਲ ਅਤੇ ਟੈਕਨਾਲੋਜੀਆਂ"
     },
     "additionalSkills": "ਵਾਧੂ ਹੁਨਰ"
+  },
+  "accessibility": {
+    "title": "ਵੈੱਬ",
+    "highlight": "ਪਹੁੰਚਯੋਗਤਾ",
+    "subtitle": "ਪ੍ਰੋਡਕਟ ਲਾਈਫਸਾਈਕਲ ਵਿੱਚ ਇਨਕਲੂਸਿਵ ਡਿਵੈਲਪਮੈਂਟ ਅਤੇ ਐਕਸੈਸਿਬਿਲਿਟੀ ਟੈਸਟਿੰਗ",
+    "sectionTitle": "ਡਿਵੈਲਪਮੈਂਟ ਅਤੇ ਟੈਸਟਿੰਗ ਅਨੁਭਵ",
+    "points": {
+      "point1": "Semantic HTML, ARIA roles, focus management ਅਤੇ keyboard-first interactions ਨਾਲ ਇਨਕਲੂਸਿਵ ਇੰਟਰਫੇਸ ਬਣਾਉਣਾ।",
+      "point2": "NVDA ਅਤੇ keyboard-only navigation ਨਾਲ real user journeys ਲਈ manual accessibility testing ਕਰਨਾ।",
+      "point3": "Axe DevTools ਨਾਲ automated audits ਚਲਾ ਕੇ contrast, labels, landmarks ਅਤੇ form validation feedback ਵਾਲੇ issues ਠੀਕ ਕਰਨਾ।",
+      "point4": "Development ਅਤੇ QA ਦੌਰਾਨ accessibility defects fix ਕਰਕੇ WCAG 2.1 AA alignment ਬਿਹਤਰ ਕਰਨਾ।"
+    }
   },
   "projects": {
     "title": "ਮੇਰੇ",

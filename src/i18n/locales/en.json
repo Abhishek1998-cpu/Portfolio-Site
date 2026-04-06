@@ -4,6 +4,7 @@
       "home": "Home",
       "about": "About",
       "skills": "Skills",
+      "accessibility": "Accessibility",
       "projects": "Projects",
       "contact": "Contact"
     },
@@ -53,6 +54,18 @@
       "tools": "Tools & Technologies"
     },
     "additionalSkills": "Additional Skills"
+  },
+  "accessibility": {
+    "title": "Web",
+    "highlight": "Accessibility",
+    "subtitle": "Inclusive development and accessibility testing across the product lifecycle",
+    "sectionTitle": "Development and Testing Experience",
+    "points": {
+      "point1": "Build inclusive interfaces using semantic HTML, ARIA roles, focus management, and keyboard-first interactions.",
+      "point2": "Perform manual accessibility testing with NVDA and keyboard-only navigation for real user journeys.",
+      "point3": "Run automated audits with Axe DevTools and resolve issues in contrast, labels, landmarks, and form validation feedback.",
+      "point4": "Improve WCAG 2.1 AA alignment by fixing accessibility defects during development and QA, not just before release."
+    }
   },
   "projects": {
     "title": "My",
