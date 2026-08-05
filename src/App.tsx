@@ -11,7 +11,6 @@ import Accessibility from './components/Accessibility';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import DulyPlan from './components/DulyPlan';
 
 const theme = createTheme({
   palette: {
@@ -53,7 +52,6 @@ function App() {
             <CssBaseline />
             <Routes>
               <Route path='/' element={<Portfolio />} />
-              <Route path='/dulyplan' element={<DulyPlan />} />
             </Routes>
           </ThemeProvider>
         </CustomThemeProvider>

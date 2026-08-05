@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
           >
             <div className='w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-primary-600'>
               <img
-                src='https://fra.cloud.appwrite.io/v1/storage/buckets/pizza-mate-bucket/files/69bbab48002caa9dd36f/view?project=69748622002fa8040371&mode=admin'
+                src={`${import.meta.env.BASE_URL}Abhishek_Verma_Profile_Image.jpeg`}
                 alt='Abhishek Verma'
                 className='w-full h-full object-cover'
               />
@@ -135,20 +135,20 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4'
+            className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center mb-8 sm:mb-12 max-w-md sm:max-w-none mx-auto px-4'
           >
             <button
               onClick={handleDownloadResume}
-              className='btn-primary flex items-center space-x-2'
+              className='btn-primary flex items-center justify-center space-x-2 py-3.5 px-6 w-full sm:w-auto text-center'
             >
               <Download />
               <span>{t('hero.downloadResume')}</span>
             </button>
             <button
               onClick={handleViewWork}
-              className={
+              className={`py-3.5 px-6 w-full sm:w-auto text-center ${
                 theme === 'dark' ? 'btn-secondary-dark' : 'btn-secondary'
-              }
+              }`}
             >
               {t('hero.viewWork')}
             </button>
@@ -159,7 +159,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className='flex justify-center space-x-4 sm:space-x-6 px-4'
+            className='flex justify-center space-x-3 sm:space-x-6 px-4'
           >
             {socialLinks.map((social, index) => (
               <motion.a

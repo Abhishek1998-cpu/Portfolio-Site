@@ -14,7 +14,6 @@ A modern, responsive portfolio website built with React, TypeScript, Vite, Tailw
   - MUI `ThemeProvider` + `CssBaseline`
 - Main route (`/`) renders section-based portfolio components:
   - `Header`, `Hero`, `About`, `Skills`, `Projects`, `Contact`, `Footer`
-- Secondary route (`/dulyplan`) renders the `DulyPlan` page.
 
 ### Core Features
 
@@ -119,8 +118,7 @@ npm run deploy
 
 ### Common GitHub Pages Notes
 
-- Because this app uses `BrowserRouter`, refreshing deep links like `/Portfolio-Site/dulyplan` can return a 404 on GitHub Pages.
-- If needed, you can add a `404.html` fallback strategy or switch to `HashRouter` to avoid route-refresh issues.
+- The app is configured with GitHub Pages base path routing.
 
 ## Customization
 

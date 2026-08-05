@@ -52,13 +52,10 @@ const Footer: React.FC = () => {
     <footer
       className={`text-white ${theme === 'dark' ? 'bg-black' : 'bg-gray-800'}`}
     >
-      <div className='container-max'>
+      <div className='container-max px-4 sm:px-6 lg:px-8'>
         {/* Main Footer Content */}
-        <div className='py-12'>
-          <div
-            className='grid md:grid-cols-4 gap-8'
-            style={{ padding: '1rem' }}
-          >
+        <div className='py-12 sm:py-16'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
             {/* Brand Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -66,18 +63,18 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className='flex items-center space-x-2 mb-4'>
-                <div className='w-10 h-10 rounded-lg overflow-hidden'>
+              <div className='flex items-center space-x-2.5 mb-4'>
+                <div className='w-10 h-10 rounded-lg overflow-hidden flex-shrink-0'>
                   <img
-                    src='https://fra.cloud.appwrite.io/v1/storage/buckets/pizza-mate-bucket/files/69bbab48002caa9dd36f/view?project=69748622002fa8040371&mode=admin'
+                    src={`${import.meta.env.BASE_URL}Abhishek_Verma_Profile_Image.jpeg`}
                     alt='Abhishek Verma'
                     className='w-full h-full object-cover'
                   />
                 </div>
-                <span className='text-xl font-bold'>Abhishek Verma</span>
+                <span className='text-lg sm:text-xl font-bold'>Abhishek Verma</span>
               </div>
               <p
-                className={`leading-relaxed ${
+                className={`text-sm leading-relaxed ${
                   theme === 'dark' ? 'text-gray-400' : 'text-gray-300'
                 }`}
               >
@@ -94,8 +91,8 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className='text-lg font-semibold mb-4'>{t('footer.quickLinks')}</h3>
-              <ul className='space-y-2'>
+              <h3 className='text-base sm:text-lg font-semibold mb-4'>{t('footer.quickLinks')}</h3>
+              <ul className='space-y-2 text-sm'>
                 {quickLinks.map(link => (
                   <li key={link.href}>
                     <a
@@ -116,16 +113,16 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className='text-lg font-semibold mb-4'>{t('footer.getInTouch')}</h3>
+              <h3 className='text-base sm:text-lg font-semibold mb-4'>{t('footer.getInTouch')}</h3>
               <div
-                className={`space-y-2 ${
+                className={`space-y-2 text-sm ${
                   theme === 'dark' ? 'text-gray-400' : 'text-gray-300'
                 }`}
               >
-                <p>abhishekverma998@gmail.com</p>
+                <p className='break-all'>abhishekverma998@gmail.com</p>
                 <p>Uttar Pradesh, India</p>
               </div>
-              <div className='flex space-x-4 mt-4'>
+              <div className='flex space-x-3 sm:space-x-4 mt-4'>
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.label}
@@ -134,14 +131,14 @@ const Footer: React.FC = () => {
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 ${
+                    className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 ${
                       theme === 'dark'
                         ? 'bg-gray-800 hover:bg-primary-600'
                         : 'bg-gray-700 hover:bg-primary-600'
                     }`}
                     aria-label={social.label}
                   >
-                    <social.icon className='w-5 h-5' />
+                    <social.icon className='w-4 h-4 sm:w-5 sm:h-5' />
                   </motion.a>
                 ))}
               </div>
@@ -155,7 +152,7 @@ const Footer: React.FC = () => {
               viewport={{ once: true }}
               className='relative'
             >
-              <h3 className='text-lg font-semibold mb-4'>
+              <h3 className='text-base sm:text-lg font-semibold mb-4'>
                 {t('footer.language')}
               </h3>
               <div className='relative'>
@@ -163,7 +160,7 @@ const Footer: React.FC = () => {
                   onClick={() =>
                     setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
                   }
-                  className={`w-full flex items-center justify-between px-4 py-2 rounded-lg border transition-all duration-300 ${
+                  className={`w-full flex items-center justify-between px-3.5 py-2 rounded-lg border text-sm transition-all duration-300 ${
                     theme === 'dark'
                       ? 'bg-gray-800 border-gray-700 text-white hover:bg-gray-700'
                       : 'bg-white border-gray-300 text-gray-800 hover:bg-gray-50'
@@ -199,7 +196,7 @@ const Footer: React.FC = () => {
                       theme === 'dark'
                         ? 'bg-gray-800 border-gray-700'
                         : 'bg-white border-gray-300'
-                    } border`}
+                    } border text-sm`}
                   >
                     {Object.entries(languageNames).map(([code, name]) => (
                       <button
@@ -228,15 +225,14 @@ const Footer: React.FC = () => {
           className={`border-t py-6 ${
             theme === 'dark' ? 'border-gray-800' : 'border-gray-700'
           }`}
-          style={{paddingRight: "1rem", paddingLeft: "1rem"}}
         >
-          <div className='flex flex-col md:flex-row justify-between items-center'>
+          <div className='flex flex-col sm:flex-row justify-between items-center gap-4'>
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className={`text-sm mb-4 md:mb-0 ${
+              className={`text-xs sm:text-sm text-center sm:text-left ${
                 theme === 'dark' ? 'text-gray-500' : 'text-gray-400'
               }`}
             >
@@ -249,7 +245,7 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               onClick={scrollToTop}
-              className='w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center hover:bg-primary-700 transition-all duration-300 hover:scale-110'
+              className='w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center hover:bg-primary-700 transition-all duration-300 hover:scale-110 flex-shrink-0'
               aria-label='Scroll to top'
             >
               <ArrowUpward className='w-5 h-5' />

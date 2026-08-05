@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
     {
       title: t('projects.ecommerce.title'),
       description: t('projects.ecommerce.description'),
-      image: '/api/placeholder/600/400',
+      image: `${import.meta.env.BASE_URL}projects/ecommerce.png`,
       technologies: [
         'React',
         'Node.js',
@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
     {
       title: t('projects.extension.title'),
       description: t('projects.extension.description'),
-      image: '/api/placeholder/600/400',
+      image: `${import.meta.env.BASE_URL}projects/extension.png`,
       technologies: [
         'Vue.js',
         'Express',
@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
     {
       title: t('projects.mobile.title'),
       description: t('projects.mobile.description'),
-      image: '/api/placeholder/600/400',
+      image: `${import.meta.env.BASE_URL}projects/mobile.png`,
       technologies: [
         'JavaScript',
         'Chrome APIs',
@@ -58,7 +58,7 @@ const Projects: React.FC = () => {
       title: 'Lending Mobile App',
       description:
         'A cross-platform mobile application, the name is similar to Lending Mobile App. It was a loan and finance management App - sub category of FinTech.',
-      image: '/api/placeholder/600/400',
+      image: `${import.meta.env.BASE_URL}projects/lending.png`,
       technologies: [
         'React Native',
         'Redux',
@@ -74,7 +74,7 @@ const Projects: React.FC = () => {
       title: 'Medical Ops',
       description:
         'A modern, responsive Patient Management Application for clinics and hospitals to streamline patient records, appointments, and billing.',
-      image: '/api/placeholder/600/400',
+      image: `${import.meta.env.BASE_URL}projects/medical.png`,
       technologies: [
         'React',
         'TypeScript',
@@ -90,8 +90,8 @@ const Projects: React.FC = () => {
       title: 'K-NFT',
       description:
         'A comprehensive NFT based Saas platform that enables marketplace to create, buy, sell, and manage NFTs with ease.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', "Node", "PostgreSQL", "AWS", "Docker"],
+      image: `${import.meta.env.BASE_URL}projects/knft.png`,
+      technologies: ['React', 'Node', 'PostgreSQL', 'AWS', 'Docker'],
       github: 'https://github.com/Abhishek1998-cpu',
       live: '#',
       featured: false,
@@ -150,7 +150,7 @@ const Projects: React.FC = () => {
         </motion.div>
 
         {/* Featured Projects */}
-        <div className='grid lg:grid-cols-2 gap-8 mb-16'>
+        <div className='grid md:grid-cols-2 gap-6 lg:gap-8 mb-12 sm:mb-16'>
           {featuredProjects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -162,8 +162,19 @@ const Projects: React.FC = () => {
                 theme === 'dark' ? 'bg-gray-800' : 'bg-white'
               }`}
             >
-              <div className='h-48 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center'>
-                <Code className='w-16 h-16 text-primary-600' />
+              <div className='aspect-[16/10] w-full bg-gradient-to-br from-gray-900 via-gray-950 to-black p-2 sm:p-3 flex items-center justify-center overflow-hidden relative group/img'>
+                {project.image &&
+                project.image !== '/api/placeholder/600/400' ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className='w-full h-full object-contain rounded-lg transition-transform duration-500 hover:scale-105 filter drop-shadow-lg'
+                  />
+                ) : (
+                  <div className='w-full h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center rounded-lg'>
+                    <Code className='w-16 h-16 text-primary-600' />
+                  </div>
+                )}
               </div>
               <div className='p-6'>
                 <h3
@@ -249,8 +260,19 @@ const Projects: React.FC = () => {
                   theme === 'dark' ? 'bg-gray-800' : 'bg-white'
                 }`}
               >
-                <div className='h-32 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center'>
-                  <Code className='w-12 h-12 text-gray-600' />
+                <div className='aspect-[16/10] w-full bg-gradient-to-br from-gray-900 via-gray-950 to-black p-2 flex items-center justify-center overflow-hidden relative group/img'>
+                  {project.image &&
+                  project.image !== '/api/placeholder/600/400' ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className='w-full h-full object-contain rounded-md transition-transform duration-500 hover:scale-105 filter drop-shadow-md'
+                    />
+                  ) : (
+                    <div className='w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center rounded-md'>
+                      <Code className='w-12 h-12 text-gray-600' />
+                    </div>
+                  )}
                 </div>
                 <div className='p-4'>
                   <h4

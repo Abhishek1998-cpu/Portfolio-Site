@@ -90,7 +90,7 @@ const Skills: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className='grid lg:grid-cols-3 gap-8'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8'>
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -98,12 +98,14 @@ const Skills: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
               viewport={{ once: true }}
-              className={`p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ${
+              className={`p-5 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ${
+                categoryIndex === 2 ? 'sm:col-span-2 lg:col-span-1' : ''
+              } ${
                 theme === 'dark' ? 'bg-gray-900' : 'bg-white'
               }`}
             >
               <h3
-                className={`text-2xl font-bold mb-6 text-center ${
+                className={`text-xl sm:text-2xl font-bold mb-6 text-center ${
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
                 }`}
               >
@@ -121,13 +123,13 @@ const Skills: React.FC = () => {
                   >
                     <div className='flex justify-between items-center'>
                       <span
-                        className={`font-medium ${
+                        className={`text-sm sm:text-base font-medium ${
                           theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                         }`}
                       >
                         {skill.name}
                       </span>
-                      <span className='text-primary-600 font-semibold'>
+                      <span className='text-primary-600 font-semibold text-sm sm:text-base'>
                         {skill.level}%
                       </span>
                     </div>
@@ -157,16 +159,16 @@ const Skills: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className='mt-16'
+          className='mt-12 sm:mt-16'
         >
           <h3
-            className={`text-3xl font-bold mb-8 text-center ${
+            className={`text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center ${
               theme === 'dark' ? 'text-white' : 'text-gray-800'
             }`}
           >
             {t('skills.additionalSkills')}
           </h3>
-          <div className='flex flex-wrap justify-center gap-4'>
+          <div className='flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4'>
             {[
               'E-commerce Development',
               'Platform Extensions',
@@ -185,7 +187,7 @@ const Skills: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
+                className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-colors duration-300 ${
                   theme === 'dark'
                     ? 'bg-primary-900 text-primary-300 hover:bg-primary-800'
                     : 'bg-primary-100 text-primary-700 hover:bg-primary-200'

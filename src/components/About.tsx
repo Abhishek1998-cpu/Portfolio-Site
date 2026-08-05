@@ -78,7 +78,7 @@ const About: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className='grid lg:grid-cols-2 gap-16 items-center'>
+        <div className='grid lg:grid-cols-2 gap-8 lg:gap-16 items-center'>
           {/* Left Column - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

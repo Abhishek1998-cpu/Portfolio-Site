@@ -54,31 +54,31 @@ const Header: React.FC = () => {
           : 'bg-transparent'
       }`}
     >
-      <nav className='container-max'>
-        <div
-          className='flex items-center justify-between py-4'
-          style={{ paddingLeft: '0.5rem', paddingRight: '0.5rem' }}
-        >
+      <nav className='container-max px-4 sm:px-6 lg:px-8'>
+        <div className='flex items-center justify-between py-3 sm:py-4'>
           {/* Logo */}
-          <div className='flex items-center space-x-2'>
-            <div className='w-10 h-10 rounded-lg overflow-hidden'>
-              <img
-                src='https://fra.cloud.appwrite.io/v1/storage/buckets/pizza-mate-bucket/files/69bbab48002caa9dd36f/view?project=69748622002fa8040371&mode=admin'
-                alt='Abhishek Verma'
-                className='w-full h-full object-cover'
-              />
+          <div
+            onClick={() => scrollToSection('#home')}
+            className='flex items-center space-x-2 sm:space-x-2.5 cursor-pointer group flex-shrink-0'
+          >
+            <div className='w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-red-500 via-primary-600 to-red-800 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300 ring-1 ring-white/20 select-none flex-shrink-0'>
+              <span className='text-white font-extrabold text-sm sm:text-base tracking-tight leading-none'>
+                AV
+              </span>
             </div>
             <span
-              className={`text-md font-medium ${
-                theme === 'dark' ? 'text-white' : 'text-gray-800'
+              className={`text-sm sm:text-base font-medium transition-colors duration-300 ${
+                theme === 'dark'
+                  ? 'text-white group-hover:text-primary-400'
+                  : 'text-gray-800 group-hover:text-primary-600'
               }`}
             >
               You're Welcome
             </span>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className='hidden md:flex items-center space-x-8'>
+          {/* Desktop Navigation (Laptops & Desktops) */}
+          <div className='hidden lg:flex items-center space-x-5 xl:space-x-8'>
             {navItems.map(item => (
               <button
                 key={item.name}
@@ -87,7 +87,7 @@ const Header: React.FC = () => {
                   theme === 'dark'
                     ? 'text-gray-300 hover:text-primary-400'
                     : 'text-gray-700 hover:text-primary-600'
-                } font-medium transition-colors duration-300 relative group`}
+                } text-sm xl:text-base font-medium transition-colors duration-300 relative group`}
               >
                 {item.name}
                 <span
@@ -97,19 +97,12 @@ const Header: React.FC = () => {
                 ></span>
               </button>
             ))}
-            <button onClick={handleDownloadResume} className='btn-primary'>
+            <button
+              onClick={handleDownloadResume}
+              className='btn-primary text-sm xl:text-base py-2.5 px-4 xl:py-3 xl:px-6'
+            >
               {t('header.downloadResume')}
             </button>
-            {/* <Link
-              to='/dulyplan'
-              className={`px-4 py-2 rounded-lg font-medium transition-colors duration-300 ${
-                theme === 'dark'
-                  ? 'text-gray-300 hover:text-primary-400'
-                  : 'text-gray-700 hover:text-primary-600'
-              }`}
-            >
-              DulyPlan Demo
-            </Link> */}
             <button
               onClick={toggleTheme}
               className={`p-2 rounded-lg transition-all duration-300 ${
@@ -123,8 +116,8 @@ const Header: React.FC = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className='md:hidden flex items-center space-x-2'>
+          {/* Mobile & Tablet Controls */}
+          <div className='lg:hidden flex items-center space-x-1 sm:space-x-2'>
             <button
               onClick={toggleTheme}
               className={`p-2 rounded-lg transition-all duration-300 ${
@@ -134,19 +127,25 @@ const Header: React.FC = () => {
               }`}
               aria-label='Toggle theme'
             >
-              {theme === 'dark' ? <LightMode /> : <DarkMode />}
+              {theme === 'dark' ? <LightMode className='w-5 h-5' /> : <DarkMode className='w-5 h-5' />}
             </button>
-            <button className='p-2' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button
+              className={`p-2 rounded-lg transition-colors ${
+                theme === 'dark' ? 'hover:bg-gray-800' : 'hover:bg-gray-100'
+              }`}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label='Toggle navigation menu'
+            >
               {isMenuOpen ? (
                 <Close
                   className={`w-6 h-6 ${
-                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                    theme === 'dark' ? 'text-gray-200' : 'text-gray-700'
                   }`}
                 />
               ) : (
                 <Menu
                   className={`w-6 h-6 ${
-                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                    theme === 'dark' ? 'text-gray-200' : 'text-gray-700'
                   }`}
                 />
               )}
@@ -154,46 +153,35 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile & Tablet Dropdown Navigation */}
         {isMenuOpen && (
           <div
-            className={`md:hidden ${
+            className={`lg:hidden ${
               theme === 'dark'
-                ? 'bg-gray-900 border-gray-700'
-                : 'bg-white border-gray-200'
-            } border-t py-4`}
-            style={{ padding: '1rem' }}
+                ? 'bg-gray-900/98 border-gray-800 shadow-2xl'
+                : 'bg-white/98 border-gray-200 shadow-2xl'
+            } border-t py-4 px-4 sm:px-6 rounded-b-2xl backdrop-blur-lg animate-fadeIn`}
           >
-            <div className='flex flex-col space-y-4'>
+            <div className='flex flex-col space-y-3'>
               {navItems.map(item => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
                   className={`${
                     theme === 'dark'
-                      ? 'text-gray-300 hover:text-primary-400'
-                      : 'text-gray-700 hover:text-primary-600'
-                  } font-medium py-2 text-left transition-colors duration-300`}
+                      ? 'text-gray-300 hover:text-primary-400 hover:bg-gray-800/60'
+                      : 'text-gray-700 hover:text-primary-600 hover:bg-gray-100/60'
+                  } font-medium py-2.5 px-3 rounded-lg text-left transition-colors duration-200`}
                 >
                   {item.name}
                 </button>
               ))}
               <button
                 onClick={handleDownloadResume}
-                className='btn-primary w-full mt-4'
+                className='btn-primary w-full mt-2 py-3'
               >
                 {t('header.downloadResume')}
               </button>
-              {/* <Link
-                to='/dulyplan'
-                className={`w-full px-4 py-2 rounded-lg font-medium text-center transition-colors duration-300 mt-2 ${
-                  theme === 'dark'
-                    ? 'text-gray-300 hover:text-primary-400'
-                    : 'text-gray-700 hover:text-primary-600'
-                }`}
-              >
-                DulyPlan Demo
-              </Link> */}
             </div>
           </div>
         )}

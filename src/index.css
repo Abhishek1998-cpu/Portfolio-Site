@@ -8,10 +8,12 @@
   html {
     scroll-behavior: smooth;
     scrollbar-width: none;
+    overflow-x: hidden;
   }
 
   body {
     font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
     transition:
       background-color 0.3s ease,
       color 0.3s ease;
@@ -106,29 +108,4 @@
     @apply border-primary-500 ring-primary-500;
   }
 
-  .input-error {
-    @apply border-red-500 ring-red-500;
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-/* Enhanced shimmer effect for better visibility */
-.shimmer-effect {
-  background: linear-gradient(
-    90deg,
-    rgba(240, 240, 240, 0.8) 0%,
-    rgba(224, 224, 224, 0.9) 20%,
-    rgba(240, 240, 240, 0.8) 40%,
-    rgba(240, 240, 240, 0.8) 100%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s ease-in-out infinite;
 }
